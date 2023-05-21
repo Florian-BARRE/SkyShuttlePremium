@@ -1,0 +1,764 @@
+<script type="text/javascript">
+
+    var GLOBAL = {
+        "pickup_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_pickup_location" },
+                "ctn": { "id": "dep_pickup_location_ctn" },
+                "values": "",
+                "index": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_location" },
+                "ctn": { "id": "ret_pickup_location_ctn" },
+                "values": "",
+                "index": ""
+            }
+        },
+        "drop_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_drop_location" },
+                "ctn": { "id": "dep_drop_location_ctn" },
+                "values": "",
+                "index": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_location" },
+                "ctn": { "id": "ret_drop_location_ctn" },
+                "values": "",
+                "index": ""
+            }
+        },
+        "passengers": { // Peut etre que sens aller -> dans ce cas là
+            "type": "number",
+            "form": { "id": "passengers" },
+            "ctn": { "id": "passengers_ctn" },
+            "values": "1"
+        },
+        "luggages": {
+            "type": "number",
+            "form": { "id": "luggages" },
+            "ctn": { "id": "luggages_ctn" },
+            "values": "1"
+        },
+        "pickup_date": {
+            "type": "date",
+            "one_way": {
+                "form": { "id": "dep_pickup_date" },
+                "ctn": { "id": "dep_pickup_date_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_date" },
+                "ctn": { "id": "ret_pickup_date_ctn" },
+                "values": ""
+            }
+        },
+        "departure_hours": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_departure_hours" },
+                "ctn": { "id": "dep_departure_hours_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_departure_hours" },
+                "ctn": { "id": "ret_departure_hours_ctn" },
+                "values": "",
+                "index": ""
+            }
+        },
+        "notes": {
+            "type": "textarea",
+            "form": { "id": "notes" },
+            "ctn": { "id": "notes_ctn" },
+            "values": ""
+        },
+        "name": {
+            "type": "textarea",
+            "form": { "id": "client_name" },
+            "ctn": { "id": "client_name_ctn" },
+            "values": ""
+        },
+        "email": {
+            "type": "textarea",
+            "form": { "id": "email" },
+            "ctn": { "id": "email_ctn" },
+            "values": ""
+        },
+        "phone_number": {
+            "type": "textarea",
+            "form": { "id": "phone_number" },
+            "ctn": { "id": "phone_number_ctn" },
+            "values": ""
+        },
+        "country": {
+            "type": "select",
+            "form": { "id": "country" },
+            "ctn": { "id": "country_ctn" },
+            "values": "",
+            "index": ""
+        },
+        "pickup_address": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_address" },
+                "ctn": { "id": "dep_pickup_address_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_address" },
+                "ctn": { "id": "ret_pickup_address_ctn" },
+                "values": ""
+            }
+        },
+        "drop_address": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_address" },
+                "ctn": { "id": "dep_drop_address_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_address" },
+                "ctn": { "id": "ret_drop_address_ctn" },
+                "values": ""
+            }
+        },
+        "pickup_flight_no": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_flight_no" },
+                "ctn": { "id": "dep_pickup_flight_no_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_flight_no" },
+                "ctn": { "id": "ret_pickup_flight_no_ctn" },
+                "values": ""
+            }
+        },
+        "drop_flight_no": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_flight_no" },
+                "ctn": { "id": "dep_drop_flight_no_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_flight_no" },
+                "ctn": { "id": "ret_drop_flight_no_ctn" },
+                "values": ""
+            }
+        },
+
+        "pickup_flight_arrival_from": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_flight_arrival_from" },
+                "ctn": { "id": "dep_pickup_flight_arrival_from_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_flight_arrival_from" },
+                "ctn": { "id": "ret_pickup_flight_arrival_from_ctn" },
+                "values": ""
+            }
+        },
+
+        "drop_flight_departure_to": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_flight_departure_to" },
+                "ctn": { "id": "dep_drop_flight_departure_to_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_flight_departure_to" },
+                "ctn": { "id": "ret_drop_flight_departure_to_ctn" },
+                "values": ""
+            }
+        },
+        "pickup_disney_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_pickup_disney_location" },
+                "ctn": { "id": "dep_pickup_disney_location_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_disney_location" },
+                "ctn": { "id": "ret_pickup_disney_location_ctn" },
+                "values": ""
+            }
+        },
+        "drop_disney_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_drop_disney_location" },
+                "ctn": { "id": "dep_drop_disney_location_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_disney_location" },
+                "ctn": { "id": "ret_drop_disney_location_ctn" },
+                "values": ""
+            }
+        },
+        "book_return": {
+            "type": "check",
+            "form": { "id": "book_return" },
+            "ctn": { "id": "book_return_ctn" },
+            "values": false
+        },
+
+    };
+
+</script>
+
+<script type="text/javascript">
+    // CONSTANTES
+    const BASE_URL = "https://skyshuttleprestige.com/receive-page-v1?preview_id=282&preview_nonce=6a0f3a4d6f&preview=true";
+    const SUBMIT_BTN_ID = "submit_btn";
+    const FIELDS_KEYS = ["pickup_location", "drop_location", "passengers", "luggages", "departure_hours", "pickup_date", "book_return"];
+</script>
+
+<script type="text/javascript">
+    window.onload = (event) => {
+        init_listeners();
+    };
+</script>
+
+<script type="text/javascript">
+    function init_listeners() {
+        document.getElementById(GLOBAL.pickup_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_location", event.target); });
+        document.getElementById(GLOBAL.drop_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("drop_location", event.target); });
+        document.getElementById(GLOBAL.passengers.form.id).addEventListener('change', (event) => { from_html_update_global("passengers", event.target); });
+        document.getElementById(GLOBAL.luggages.form.id).addEventListener('change', (event) => { from_html_update_global("luggages", event.target); });
+        document.getElementById(GLOBAL.departure_hours.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("departure_hours", event.target); });
+        document.getElementById(GLOBAL.pickup_date.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_date", event.target); });
+        document.getElementById(GLOBAL.book_return.form.id).addEventListener('change', (event) => { from_html_update_global("book_return", event.target); });
+
+        document.getElementById(SUBMIT_BTN_ID).addEventListener('click', (event) => { send_form(); });
+    }
+</script>
+
+<script type="text/javascript">
+    // Input "field_name-mode" (return or one_way) | "field_name"
+    // input type: "html" or "value"
+    function update_global(cmd, input_type, input) {
+        // Decode cmd
+        let field_name = cmd;
+        let mode;
+        const field_and_mode = cmd.split('-');
+
+        if (field_and_mode.length > 1) {
+            field_name = field_and_mode[0];
+            mode = field_and_mode[1];
+        }
+        const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+        switch (GLOBAL[field_name].type) {
+            case "select":
+                if (one_way_return_mode) {
+                    if (mode === "one_way") {
+                        if (input_type === "html") {
+                            GLOBAL[field_name].one_way.index = input.selectedIndex;
+                            GLOBAL[field_name].one_way.values = input[input.selectedIndex].text;
+                        }
+                        else if (input_type === "value") {
+                            // For select value update index and text 
+                            GLOBAL[field_name].one_way.index = input;
+                            GLOBAL[field_name].one_way.values = input;
+                        }
+                    }
+                    else if (mode === "return") {
+                        if (input_type === "html") {
+                            GLOBAL[field_name].return.index = input.selectedIndex;
+                            GLOBAL[field_name].return.values = input[input.selectedIndex].text;
+                        }
+                        else if (input_type === "value") {
+                            // For select value update index and text 
+                            GLOBAL[field_name].return.index = input;
+                            GLOBAL[field_name].return.values = input;
+                        }
+                    }
+                }
+                else {
+                    if (input_type === "html") {
+                        GLOBAL[field_name].index = input.selectedIndex;
+                        GLOBAL[field_name].values = input[input.selectedIndex].text;
+                    }
+                    else if (input_type === "value") {
+                        // For select value update index and text 
+                        GLOBAL[field_name].index = input;
+                        GLOBAL[field_name].values = input;
+                    }
+                }
+                break;
+
+            case "check":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.checked;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.checked;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.checked;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+
+            case "date":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+
+            case "textarea":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+            case "number":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+        }
+    }
+
+    function from_html_update_global(cmd, html) {
+        update_global(cmd, "html", html);
+    }
+
+    function from_value_update_global(cmd, value) {
+        update_global(cmd, "value", value);
+    }
+</script>
+
+<script type="text/javascript">
+    function send_form() {
+        let url = BASE_URL;
+
+        for (i in FIELDS_KEYS) {
+            const field_name = FIELDS_KEYS[i];
+            const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+            let val;
+            if (GLOBAL[field_name].type == "select") {
+                if (one_way_return_mode) val = GLOBAL[field_name].one_way.index;
+                else val = GLOBAL[field_name].index;
+            }
+            else {
+                if (one_way_return_mode) val = GLOBAL[field_name].one_way.values;
+                else val = GLOBAL[field_name].values;
+            }
+
+            if (val === null || val === undefined) val = 0;
+
+            url += "&" + field_name + "=" + val;
+        }
+        window.location.href = url;
+    }
+
+</script>
+<script type="text/javascript">
+    // GLOBAL est déjà importé, ainsi que global update
+    const PRICE_ID = "price_value";
+    const DEFAULT_PRICE = "-"
+    const PRICES = {
+        "transfers": {
+            "PARIS": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            },
+            "DISNEY": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            },
+            "ORLY": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            },
+            "CDG": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            },
+            "BEAUVAIS": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            }
+        },
+        "extra_prices": {
+            "night": {
+                "0": 15,
+                "1": 15,
+                "2": 15,
+                "3": 15,
+                "4": 15,
+                "5": 15,
+                "6": 15,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0,
+                "17": 0,
+                "18": 0,
+                "19": 0,
+                "20": 0,
+                "21": 0,
+                "22": 15,
+                "23": 15
+            }
+        }
+    }
+
+</script>
+
+<script type="text/javascript">
+    window.onload = (event) => {
+        init_listeners_pricer();
+        set_default_price();
+    };
+</script>
+
+
+<script type="text/javascript">
+    function init_listeners_pricer() {
+        // Pickup location 
+        document.getElementById(GLOBAL.pickup_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_location-one_way", event.target); update_price(); });
+        //document.getElementById(GLOBAL.pickup_location.return.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_location-return", event.target); update_price(); });
+        // Drop Location
+        document.getElementById(GLOBAL.drop_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("drop_location-one_way", event.target); update_price(); });
+        //document.getElementById(GLOBAL.drop_location.return.form.id).addEventListener('change', (event) => { from_html_update_global("drop_location-return", event.target); update_price(); });
+        // Hours
+        document.getElementById(GLOBAL.departure_hours.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("departure_hours-one_way", event.target); update_price(); });
+        //document.getElementById(GLOBAL.departure_hours.return.form.id).addEventListener('change', (event) => { from_html_update_global("departure_hours-return", event.target); update_price(); });
+        // Return book
+        document.getElementById(GLOBAL.book_return.form.id).addEventListener('change', (event) => { from_html_update_global("book_return", event.target); update_price(); });
+    }
+    function set_default_price(){
+        document.getElementById(PRICE_ID).innerHTML = (DEFAULT_PRICE + "€");
+    }
+</script>
+
+<script type="text/javascript">
+    function update_price() {
+        let html_price = document.getElementById(PRICE_ID);
+        let price = 0;
+        const one_way_price = calculate_price("one_way");
+        const return_price = (GLOBAL.book_return.values === true) ? one_way_price : 0;
+        const total_price = one_way_price + return_price;
+
+        console.log("total_price", one_way_price, return_price, total_price);
+        html_price.innerHTML = (total_price + "€");
+    }
+    // mode -> one_way or return
+    function calculate_price(mode) {
+        let price = 0;
+
+        const pickup_location = GLOBAL.pickup_location[mode].values;
+        const drop_location = GLOBAL.drop_location[mode].values;
+        const passengers = GLOBAL.passengers.values;
+        const hour = GLOBAL.departure_hours[mode].values;
+
+        if (have_value(pickup_location) && have_value(drop_location) && have_value(passengers))
+            price += PRICES.transfers[pickup_location][drop_location][passengers].price;
+        if (have_value(hour) && hour.split(":")[0] != "--") {
+            const hour_value = Number(hour.split(":")[0]);
+            price += PRICES.extra_prices.night[hour_value];
+        }
+
+        return price;
+    }
+
+    function have_value(x) {
+        return (x != null && x != undefined && x != "null" && x != "undefined" && x != "" && x != " ");
+    }
+</script>

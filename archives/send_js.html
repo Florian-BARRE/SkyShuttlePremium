@@ -1,0 +1,312 @@
+<script type="text/javascript">
+    
+        var GLOBAL = {
+            "pickup_location": {
+                "type": "select",
+                "one_way": {
+                    "form": { "id": "dep_pickup_location" },
+                    "ctn": { "id": "dep_pickup_location_ctn" },
+                    "values": "",
+                    "index": ""
+                },
+                "return": {
+                    "form": { "id": "ret_pickup_location" },
+                    "ctn": { "id": "ret_pickup_location_ctn" },
+                    "values": "",
+                    "index": ""
+                }
+            },
+            "drop_location": {
+                "type": "select",
+                "one_way": {
+                    "form": { "id": "dep_drop_location" },
+                    "ctn": { "id": "dep_drop_location_ctn" },
+                    "values": "",
+                    "index": ""
+                },
+                "return": {
+                    "form": { "id": "ret_drop_location" },
+                    "ctn": { "id": "ret_drop_location_ctn" },
+                    "values": "",
+                    "index": ""
+                }
+            },
+            "passengers": { // Peut etre que sens aller -> dans ce cas là
+                "type": "number",
+                "form": { "id": "passengers" },
+                "ctn": { "id": "passengers_ctn" },
+                "values": "1"
+            },
+            "luggages": {
+                "type": "number",
+                "form": { "id": "luggages" },
+                "ctn": { "id": "luggages_ctn" },
+                "values": "1"
+            },
+            "pickup_date": {
+                "type": "date",
+                "one_way": {
+                    "form": { "id": "dep_pickup_date" },
+                    "ctn": { "id": "dep_pickup_date_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_pickup_date" },
+                    "ctn": { "id": "ret_pickup_date_ctn" },
+                    "values": ""
+                }
+            },
+            "departure_hours": {
+                "type": "select",
+                "one_way": {
+                    "form": { "id": "dep_departure_hours" },
+                    "ctn": { "id": "dep_departure_hours_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_departure_hours" },
+                    "ctn": { "id": "ret_departure_hours_ctn" },
+                    "values": "",
+                    "index": ""
+                }
+            },
+            "notes": {
+                "type": "textarea",
+                "form": { "id": "notes" },
+                "ctn": { "id": "notes_ctn" },
+                "values": ""
+            },
+            "name": {
+                "type": "textarea",
+                "form": { "id": "client_name" },
+                "ctn": { "id": "client_name_ctn" },
+                "values": ""
+            },
+            "email": {
+                "type": "textarea",
+                "form": { "id": "email" },
+                "ctn": { "id": "email_ctn" },
+                "values": ""
+            },
+            "phone_number": {
+                "type": "textarea",
+                "form": { "id": "phone_number" },
+                "ctn": { "id": "phone_number_ctn" },
+                "values": ""
+            },
+            "country": {
+                "type": "select",
+                "form": { "id": "country" },
+                "ctn": { "id": "country_ctn" },
+                "values": "",
+                "index": ""
+            },
+            "pickup_address": {
+                "type": "textarea",
+                "one_way": {
+                    "form": { "id": "dep_pickup_address" },
+                    "ctn": { "id": "dep_pickup_address_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_pickup_address" },
+                    "ctn": { "id": "ret_pickup_address_ctn" },
+                    "values": ""
+                }
+            },
+            "drop_address": {
+                "type": "textarea",
+                "one_way": {
+                    "form": { "id": "dep_drop_address" },
+                    "ctn": { "id": "dep_drop_address_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_drop_address" },
+                    "ctn": { "id": "ret_drop_address_ctn" },
+                    "values": ""
+                }
+            },
+            "pickup_flight_no": {
+                "type": "textarea",
+                "one_way": {
+                    "form": { "id": "dep_pickup_flight_no" },
+                    "ctn": { "id": "dep_pickup_flight_no_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_pickup_flight_no" },
+                    "ctn": { "id": "ret_pickup_flight_no_ctn" },
+                    "values": ""
+                }
+            },
+            "drop_flight_no": {
+                "type": "textarea",
+                "one_way": {
+                    "form": { "id": "dep_drop_flight_no" },
+                    "ctn": { "id": "dep_drop_flight_no_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_drop_flight_no" },
+                    "ctn": { "id": "ret_drop_flight_no_ctn" },
+                    "values": ""
+                }
+            },
+
+            "pickup_flight_arrival_from": {
+                "type": "textarea",
+                "one_way": {
+                    "form": { "id": "dep_pickup_flight_arrival_from" },
+                    "ctn": { "id": "dep_pickup_flight_arrival_from_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_pickup_flight_arrival_from" },
+                    "ctn": { "id": "ret_pickup_flight_arrival_from_ctn" },
+                    "values": ""
+                }
+            },
+
+            "drop_flight_departure_to": {
+                "type": "textarea",
+                "one_way": {
+                    "form": { "id": "dep_drop_flight_departure_to" },
+                    "ctn": { "id": "dep_drop_flight_departure_to_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_drop_flight_departure_to" },
+                    "ctn": { "id": "ret_drop_flight_departure_to_ctn" },
+                    "values": ""
+                }
+            },
+            "pickup_disney_location": {
+                "type": "select",
+                "one_way": {
+                    "form": { "id": "dep_pickup_disney_location" },
+                    "ctn": { "id": "dep_pickup_disney_location_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_pickup_disney_location" },
+                    "ctn": { "id": "ret_pickup_disney_location_ctn" },
+                    "values": ""
+                }
+            },
+            "drop_disney_location": {
+                "type": "select",
+                "one_way": {
+                    "form": { "id": "dep_drop_disney_location" },
+                    "ctn": { "id": "dep_drop_disney_location_ctn" },
+                    "values": ""
+                },
+                "return": {
+                    "form": { "id": "ret_drop_disney_location" },
+                    "ctn": { "id": "ret_drop_disney_location_ctn" },
+                    "values": ""
+                }
+            },
+            "book_return": {
+                "type": "check",
+                "form": { "id": "book_return" },
+                "ctn": { "id": "book_return_ctn" },
+                "values": false
+            },
+
+        };
+
+</script>
+
+<script type="text/javascript">
+    // CONSTANTES
+    const BASE_URL = "https://skyshuttleprestige.com/receive-page-v1?preview_id=282&preview_nonce=6a0f3a4d6f&preview=true";
+    const SUBMIT_BTN_ID = "submit_btn";
+    const FIELDS_KEYS = ["pickup_location", "drop_location", "passengers", "luggages", "departure_hours", "pickup_date", "book_return"];
+</script>
+
+<script type="text/javascript">
+    window.onload = (event) => {
+        init_listeners();
+    };
+</script>
+
+<script type="text/javascript">
+    function init_listeners() {
+        document.getElementById(GLOBAL.pickup_location.one_way.form.id).addEventListener('change', (event) => { update_global("pickup_location", event.target); });
+        document.getElementById(GLOBAL.drop_location.one_way.form.id).addEventListener('change', (event) => { update_global("drop_location", event.target); });
+        document.getElementById(GLOBAL.passengers.form.id).addEventListener('change', (event) => { update_global("passengers", event.target); });
+        document.getElementById(GLOBAL.luggages.form.id).addEventListener('change', (event) => { update_global("luggages", event.target); });
+        document.getElementById(GLOBAL.departure_hours.one_way.form.id).addEventListener('change', (event) => { update_global("departure_hours", event.target); });
+        document.getElementById(GLOBAL.pickup_date.one_way.form.id).addEventListener('change', (event) => { update_global("pickup_date", event.target); });
+        document.getElementById(GLOBAL.book_return.form.id).addEventListener('change', (event) => { update_global("book_return", event.target); });
+
+        document.getElementById(SUBMIT_BTN_ID).addEventListener('click', (event) => { send_form(); });
+    }
+</script>
+
+<script type="text/javascript">
+    function update_global(field, target) {
+        const one_way_return_mode = (GLOBAL[field].one_way !== undefined && GLOBAL[field].one_way !== null);
+        switch (GLOBAL[field].type) {
+            case "select":
+                if (one_way_return_mode) {
+                    GLOBAL[field].one_way.index = target.selectedIndex;
+                    GLOBAL[field].one_way.values = target[target.selectedIndex].text;
+                }
+                else {
+                    GLOBAL[field].index = target.selectedIndex;
+                    GLOBAL[field].values = target[target.selectedIndex].text;
+                }
+                break;
+
+            case "check":
+                if (one_way_return_mode) GLOBAL[field].one_way.values = target.checked;
+                else GLOBAL[field].values = target.checked;
+                break;
+
+            case "date":
+                if (one_way_return_mode) GLOBAL[field].one_way.values = target.value;
+                else GLOBAL[field].values = target.value;
+                break;
+
+            case "textarea":
+                if (one_way_return_mode) GLOBAL[field].one_way.values = target.value;
+                else GLOBAL[field].values = target.value;
+                break;
+
+            case "number":
+                if (one_way_return_mode) GLOBAL[field].one_way.values = target.value;
+                else GLOBAL[field].values = target.value;
+                break;
+        }
+
+    }
+</script>
+
+<script type="text/javascript">
+    function send_form() {
+        let url = BASE_URL;
+
+        for (i in FIELDS_KEYS) {
+            const field_name = FIELDS_KEYS[i];
+            const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+            let val;
+            if (GLOBAL[field_name].type == "select") {
+                if (one_way_return_mode) val = GLOBAL[field_name].one_way.index;
+                else val = GLOBAL[field_name].index;
+            }
+            else {
+                if (one_way_return_mode) val = GLOBAL[field_name].one_way.values;
+                else val = GLOBAL[field_name].values;
+            }
+
+            if (val === null || val === undefined) val = 0;
+
+            url += "&" + field_name + "=" + val;
+        }
+        window.location.href = url;
+    }
+
+</script>

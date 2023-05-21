@@ -1,0 +1,330 @@
+<script type="text/javascript">
+    // GLOBAL est déjà importé, ainsi que global update
+    const PRICE_ID = "price_value";
+    const PRICES = {
+        "transfers": {
+            "PARIS": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            },
+            "DISNEY": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            },
+            "ORLY": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            },
+            "CDG": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            },
+            "BEAUVAIS": {
+                "PARIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "DISNEY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "ORLY": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "CDG": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                },
+                "BEAUVAIS": {
+                    "1": { "price": 10 },
+                    "2": { "price": 10 },
+                    "3": { "price": 10 },
+                    "4": { "price": 10 },
+                    "5": { "price": 10 },
+                    "6": { "price": 10 },
+                    "7": { "price": 10 },
+                }
+            }
+        },
+        "extra_prices": {
+            "night": {
+                "0": 15,
+                "1": 15,
+                "2": 15,
+                "3": 15,
+                "4": 15,
+                "5": 15,
+                "6": 15,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0,
+                "17": 0,
+                "18": 0,
+                "19": 0,
+                "20": 0,
+                "21": 0,
+                "22": 15,
+                "23": 15
+            }
+        }
+    }
+
+</script>
+
+<script type="text/javascript">
+    window.onload = (event) => {
+        init_listeners_pricer();
+    };
+</script>
+
+
+<script type="text/javascript">
+    function init_listeners_pricer() {
+        // Pickup location 
+        document.getElementById(GLOBAL.pickup_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_location-one_way", event.target); update_price(); });
+        document.getElementById(GLOBAL.pickup_location.return.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_location-return", event.target); update_price(); });
+        // Drop Location
+        document.getElementById(GLOBAL.drop_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("drop_location-one_way", event.target); update_price(); });
+        document.getElementById(GLOBAL.drop_location.return.form.id).addEventListener('change', (event) => { from_html_update_global("drop_location-return", event.target); update_price(); });
+        // Hours
+        document.getElementById(GLOBAL.departure_hours.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("departure_hours-one_way", event.target); update_price(); });
+        document.getElementById(GLOBAL.departure_hours.return.form.id).addEventListener('change', (event) => { from_html_update_global("departure_hours-return", event.target); update_price(); });
+        // Return book
+        document.getElementById(GLOBAL.book_return.form.id).addEventListener('change', (event) => { from_html_update_global("book_return", event.target); update_price(); });
+    }
+</script>
+
+<script type="text/javascript">
+    function update_price() {
+        let html_price = document.getElementById(PRICE_ID);
+        let price = 0;
+        const one_way_price = calculate_price("one_way");
+        const return_price = (GLOBAL.book_return.values === true) ? calculate_price("return") : 0;
+        const total_price = one_way_price + return_price;
+
+        console.log("total_price", one_way_price, return_price, total_price);
+        html_price.innerHTML = (total_price + "€");
+    }
+    // mode -> one_way or return
+    function calculate_price(mode) {
+        let price = 0;
+
+        const pickup_location = GLOBAL.pickup_location[mode].values;
+        const drop_location = GLOBAL.drop_location[mode].values;
+        const passengers = GLOBAL.passengers.values;
+        const hour = GLOBAL.departure_hours[mode].values;
+
+        console.log("calcul", pickup_location, drop_location, passengers, hour);
+
+        if (have_value(pickup_location) && have_value(drop_location) && have_value(passengers))
+            price += PRICES.transfers[pickup_location][drop_location][passengers].price;
+        if (have_value(hour))
+            price += PRICES.extra_prices.night[hour];
+
+        return price;
+    }
+
+    function have_value(x) {
+        return (x != null && x != undefined && x != "null" && x != "undefined" && x != "" && x != " ");
+    }
+</script>

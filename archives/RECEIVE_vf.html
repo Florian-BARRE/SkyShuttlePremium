@@ -1,0 +1,861 @@
+<script type="text/javascript">
+    var GLOBAL = {
+        "pickup_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_pickup_location" },
+                "ctn": { "id": "dep_pickup_location_ctn" },
+                "values": "",
+                "index": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_location" },
+                "ctn": { "id": "ret_pickup_location_ctn" },
+                "values": "",
+                "index": ""
+            }
+        },
+        "drop_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_drop_location" },
+                "ctn": { "id": "dep_drop_location_ctn" },
+                "values": "",
+                "index": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_location" },
+                "ctn": { "id": "ret_drop_location_ctn" },
+                "values": "",
+                "index": ""
+            }
+        },
+        "passengers": { // Peut etre que sens aller -> dans ce cas là
+            "type": "number",
+            "form": { "id": "passengers" },
+            "ctn": { "id": "passengers_ctn" },
+            "values": "1"
+        },
+        "luggages": {
+            "type": "number",
+            "form": { "id": "luggages" },
+            "ctn": { "id": "luggages_ctn" },
+            "values": "1"
+        },
+        "pickup_date": {
+            "type": "date",
+            "one_way": {
+                "form": { "id": "dep_pickup_date" },
+                "ctn": { "id": "dep_pickup_date_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_date" },
+                "ctn": { "id": "ret_pickup_date_ctn" },
+                "values": ""
+            }
+        },
+        "departure_hours": {
+            "type": "number",
+            "one_way": {
+                "form": { "id": "dep_departure_hours" },
+                "ctn": { "id": "dep_departure_hours_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_departure_hours" },
+                "ctn": { "id": "ret_departure_hours_ctn" },
+                "values": ""
+            }
+        },
+        "departure_minutes": {
+            "type": "number",
+            "one_way": {
+                "form": { "id": "dep_departure_minutes" },
+                "ctn": { "id": "dep_departure_minutes_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_departure_minutes" },
+                "ctn": { "id": "ret_departure_minutes_ctn" },
+                "values": ""
+            }
+        },
+        "notes": {
+            "type": "textarea",
+            "form": { "id": "notes" },
+            "ctn": { "id": "notes_ctn" },
+            "values": ""
+        },
+        "name": {
+            "type": "textarea",
+            "form": { "id": "client_name" },
+            "ctn": { "id": "client_name_ctn" },
+            "values": ""
+        },
+        "email": {
+            "type": "textarea",
+            "form": { "id": "email" },
+            "ctn": { "id": "email_ctn" },
+            "values": ""
+        },
+        "phone_number": {
+            "type": "textarea",
+            "form": { "id": "phone_number" },
+            "ctn": { "id": "phone_number_ctn" },
+            "values": ""
+        },
+        "country": {
+            "type": "select",
+            "form": { "id": "country" },
+            "ctn": { "id": "country_ctn" },
+            "values": "",
+            "index": ""
+        },
+        "pickup_address": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_address" },
+                "ctn": { "id": "dep_pickup_address_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_address" },
+                "ctn": { "id": "ret_pickup_address_ctn" },
+                "values": ""
+            }
+        },
+        "drop_address": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_address" },
+                "ctn": { "id": "dep_drop_address_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_address" },
+                "ctn": { "id": "ret_drop_address_ctn" },
+                "values": ""
+            }
+        },
+        "pickup_flight_no": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_flight_no" },
+                "ctn": { "id": "dep_pickup_flight_no_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_flight_no" },
+                "ctn": { "id": "ret_pickup_flight_no_ctn" },
+                "values": ""
+            }
+        },
+        "drop_flight_no": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_flight_no" },
+                "ctn": { "id": "dep_drop_flight_no_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_flight_no" },
+                "ctn": { "id": "ret_drop_flight_no_ctn" },
+                "values": ""
+            }
+        },
+
+        "pickup_flight_arrival_from": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_flight_arrival_from" },
+                "ctn": { "id": "dep_pickup_flight_arrival_from_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_flight_arrival_from" },
+                "ctn": { "id": "ret_pickup_flight_arrival_from_ctn" },
+                "values": ""
+            }
+        },
+
+        "drop_flight_departure_to": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_flight_departure_to" },
+                "ctn": { "id": "dep_drop_flight_departure_to_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_flight_departure_to" },
+                "ctn": { "id": "ret_drop_flight_departure_to_ctn" },
+                "values": ""
+            }
+        },
+        "pickup_disney_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_pickup_disney_location" },
+                "ctn": { "id": "dep_pickup_disney_location_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_disney_location" },
+                "ctn": { "id": "ret_pickup_disney_location_ctn" },
+                "values": ""
+            }
+        },
+        "drop_disney_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_drop_disney_location" },
+                "ctn": { "id": "dep_drop_disney_location_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_disney_location" },
+                "ctn": { "id": "ret_drop_disney_location_ctn" },
+                "values": ""
+            }
+        },
+        "book_return": {
+            "type": "check",
+            "form": { "id": "book_return" },
+            "ctn": { "id": "book_return_ctn" },
+            "values": false
+        },
+
+    };
+
+</script>
+
+<!-- Basic Fields -->
+<div>
+    <h2>Informations de transport</h2>
+    <!-- One Way Locations-->
+    <div>
+        <!-- One Way Pick location -->
+        <label id="dep_pickup_location_ctn"> One Way PickUp location
+            [select* dep_pickup_location id:dep_pickup_location default:0 "Sélectionnez un lieu de départ" "CDG" "ORLY"
+            "BEAUVAIS" "DISNEY" "PARIS"]
+        </label>
+        <!-- One Way Drop location -->
+        <label id="dep_drop_location_ctn"> One Way Drop location
+            [select* dep_drop_location id:dep_drop_location default:0 "Sélectionnez un lieu d'arrivé" "CDG" "ORLY"
+            "BEAUVAIS"
+            "DISNEY"
+            "PARIS"]
+        </label>
+        <!-- One Way PickUp Date -->
+        <label id="dep_pickup_date_ctn"> One Way PickUp Date
+            [date* dep_pickup_date id:dep_pickup_date]
+        </label>
+        <!-- One Way PickUp Hours -->
+        <label id="dep_departure_hours_ctn"> One Way Departure Hours
+            [number dep_departure_hours min:0 max:23 id:dep_departure_hours]
+        </label>
+        <!-- One Way PickUp Minutes -->
+        <label id="dep_departure_minutes_ctn"> One Way Departure Minutes
+            [number dep_departure_minutes min:0 max:59 step: 5 id:dep_departure_minutes]
+        </label>
+    </div>
+
+    <!-- Return Locations-->
+    <div>
+        <!-- Return Pick location -->
+        <label id="ret_pickup_location_ctn" style="display: none;"> Return PickUp location
+            [select* ret_pickup_location id:ret_pickup_location default:0 "Sélectionnez un lieu de départ" "CDG" "ORLY"
+            "BEAUVAIS" "DISNEY" "PARIS"]
+        </label>
+        <!-- Return Drop location -->
+        <label id="ret_drop_location_ctn" style="display: none;"> Return Drop location
+            [select* ret_drop_location id:ret_drop_location default:0 "Sélectionnez un lieu d'arrivé" "CDG" "ORLY"
+            "BEAUVAIS" "DISNEY"
+            "PARIS"]
+        </label>
+        <!-- Return PickUp Date -->
+        <label id="ret_pickup_date_ctn" style="display: none;"> Return PickUp Date
+            [date* ret_pickup_date id:ret_pickup_date]
+        </label>
+        <!-- Return PickUp Hours -->
+        <label id="ret_departure_hours_ctn" style="display: none;"> Return Departure Hours
+            [number ret_departure_hours min:0 max:23 id:ret_departure_hours]
+        </label>
+        <!-- Return PickUp Minutes -->
+        <label id="ret_departure_minutes_ctn" style="display: none;"> Return Departure Minutes
+            [number ret_departure_minutes min:0 max:59 step: 5 id:ret_departure_minutes]
+        </label>
+    </div>
+
+    <!-- Constantes fields -->
+    <div>
+        <!-- One Way Passengers -->
+        <label id="passengers_ctn"> One Way Nb Passengers
+            [number passengers min:0 max:7 id:passengers "1"]
+        </label>
+        <!-- Return Passengers on le fait pas pour l'instant -->
+
+        <!-- luggages pieces -->
+        <label id="luggages_ctn"> One Way Luggages
+            [number luggages min:0 max:7 id:luggages "1"]
+        </label>
+        <!-- Return luggages pieces on le fait pas pour l'instant -->
+
+        <!-- Retour -->
+        <label id="book_return_ctn"> Retour
+            [checkbox book_return id:book_return "Avec retour"]
+        </label>
+    </div>
+</div>
+
+<!-- Classic Tranfer Fields-->
+<div>
+    <h2> Informations du voyage classique </h2>
+    <!-- One Way Classic Infos-->
+    <label id="dep_pickup_address_ctn" style="display: none;"> One Way Pickup Address
+        [textarea* dep_pickup_address id:dep_pickup_address placeholder "saisissez l'adresse..."]
+    </label>
+    <label id="dep_drop_address_ctn" style="display: none;"> One Way Destination Address
+        [textarea* dep_drop_address id:dep_drop_address placeholder "saisissez l'adresse..."]
+    </label>
+
+    <!-- Return Classic Infos-->
+    <label id="ret_pickup_address_ctn" style="display: none;"> Return Pickup Address
+        [textarea* ret_pickup_address id:ret_pickup_address placeholder "saisissez l'adresse..."]
+    </label>
+    <label id="ret_drop_address_ctn" style="display: none;"> Return Destination Address
+        [textarea* ret_drop_address id:ret_drop_address placeholder "saisissez l'adresse..."]
+    </label>
+</div>
+
+<!-- Flight Fields -->
+<div>
+    <h2> Informations de vol</h2>
+    <!-- One Way Flight Infos-->
+    <div>
+        <label id="dep_pickup_flight_no_ctn" style="display: none;"> One Way PickUp Flight No
+            [textarea* dep_pickup_flight_no id:dep_pickup_flight_no placeholder "saisissez votre numéro de vol..."]
+        </label>
+        <label id="dep_drop_flight_no_ctn" style="display: none;"> On Way Drop Flight No
+            [textarea* dep_drop_flight_no id:dep_drop_flight_no placeholder "saisissez votre numéro de vol..."]
+        </label>
+        <label id="dep_pickup_flight_arrival_from_ctn" style="display: none;"> One Way PickUp Flight Arrival from
+            [textarea* dep_pickup_flight_arrival_from id:dep_pickup_flight_arrival_from placeholder "saisissez le pays
+            de
+            provenance"]
+        </label>
+        <label id="dep_drop_flight_departure_to_ctn" style="display: none;"> One Way Drop Flight Departure To
+            [textarea* dep_drop_flight_departure_to id:dep_drop_flight_departure_to placeholder "saisissez le pays de
+            destination"]
+        </label>
+    </div>
+
+    <!-- Return Flight Infos-->
+    <div>
+        <label id="ret_pickup_flight_no_ctn" style="display: none;"> Return PickUp Flight No
+            [textarea* ret_pickup_flight_no id:ret_pickup_flight_no placeholder "saisissez votre numéro de vol..."]
+        </label>
+        <label id="ret_drop_flight_no_ctn" style="display: none;"> Return Drop Flight No
+            [textarea* ret_drop_flight_no id:ret_drop_flight_no placeholder "saisissez votre numéro de vol..."]
+        </label>
+
+        <label id="ret_pickup_flight_arrival_from_ctn" style="display: none;"> Return PickUp Flight Arrival from
+            [textarea* ret_pickup_flight_arrival_from id:ret_pickup_flight_arrival_from placeholder "saisissez le pays
+            de
+            provenance"]
+        </label>
+        <label id="ret_drop_flight_departure_to_ctn" style="display: none;"> Return Drop Flight Departure To
+            [textarea* ret_drop_flight_departure_to id:ret_drop_flight_departure_to placeholder "saisissez le pays de
+            destination"]
+        </label>
+    </div>
+</div>
+
+<!-- Disney Fields -->
+<div>
+    <h2> Informations Disney </h2>
+    <!-- Disney Location One Way-->
+    <div>
+        <label id="dep_pickup_disney_location_ctn" style="display: none;"> One Way Disney PickUp Location
+            [select* dep_pickup_disney_location id:dep_pickup_disney_location default:0 "Disney mode select" "a" "b"]
+        </label>
+        <label id="dep_drop_disney_location_ctn" style="display: none;"> One Way Disney PickUp Location
+            [select* dep_drop_disney_location id:dep_drop_disney_location default:0 "Disney mode select" "a" "b"]
+        </label>
+    </div>
+
+    <!-- Disney Location Return-->
+    <div>
+        <!-- Pickup location Return-->
+        <label id="ret_pickup_disney_location_ctn" style="display: none;"> Return Disney PickUp Location
+            [select* ret_pickup_disney_location id:ret_pickup_disney_location default:0 "Disney mode select" "a" "b"]
+        </label>
+        <!-- Drop location Return-->
+        <label id="ret_drop_disney_location_ctn" style="display: none;"> Return Disney PickUp Location
+            [select* ret_drop_disney_location id:ret_drop_disney_location default:0 "Disney mode select" "a" "b"]
+        </label>
+    </div>
+</div>
+
+
+<!-- Complementary Flieds -->
+<div>
+    <h2> Informations complémentaires </h2>
+    <!-- Notes -->
+    <label id="notes_ctn"> Ajoutez une note
+        [textarea notes id:notes ""]
+    </label>
+
+    <!-- Name -->
+    <label id="client_name_ctn"> Nom
+        [textarea client_name id:client_name ""]
+    </label>
+
+    <!-- Email -->
+    <label id="email_ctn"> Email
+        [email email id:email placeholder "dupont@gmail.com"]
+    </label>
+
+    <!-- Phone Number -->
+    <label id="phone_number_ctn"> Numéro de téléphone
+        [phonetext phone_number id:phone_number numberonly]
+    </label>
+
+    <!-- Country !!! à remplir avec les pays -->
+    <label id="country_ctn"> Country
+        [countrytext country id:country]
+    </label>
+</div>
+
+[submit id:submit_btn "Envoyer"]
+
+<script type="text/javascript">
+    // CONSTANTES
+    const FIELDS_KEYS = ["pickup_location", "drop_location", "passengers", "luggages", "departure_hours",
+        "departure_minutes", "pickup_date", "book_return"];
+
+    const DISNEY_LOCATIONS = ["DISNEY"];
+    const FLIGHT_LOCATIONS = ["CDG", "ORLY", "BEAUVAIS"];
+    const CLASSIC_LOCATIONS = ["PARIS"];
+</script>
+
+<script type="text/javascript">
+    window.onload = (event) => {
+        from_url_to_global();
+        init_listeners();
+        pre_fill_fields();
+        update_html();
+    };
+</script>
+
+<script type="text/javascript">
+    function init_listeners() {
+        // Pickup location 
+        document.getElementById(GLOBAL.pickup_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_location-one_way", event.target); update_html(); });
+        document.getElementById(GLOBAL.pickup_location.return.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_location-return", event.target); update_html(); });
+        // Drop Location
+        document.getElementById(GLOBAL.drop_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("drop_location-one_way", event.target); update_html(); });
+        document.getElementById(GLOBAL.drop_location.return.form.id).addEventListener('change', (event) => { from_html_update_global("drop_location-return", event.target); update_html(); });
+        // Return book
+        document.getElementById(GLOBAL.book_return.form.id).addEventListener('change', (event) => {
+            from_html_update_global("book_return", event.target);
+            update_html();
+            reverse_dep_ret_location();
+        });
+    }
+</script>
+
+
+<script type="text/javascript">
+    function from_url_to_global() {
+        for (let i in FIELDS_KEYS) {
+            const field_name = FIELDS_KEYS[i];
+            const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+            const val = get_param(field_name);
+            if (val !== null && val !== undefined && val !== "null" && val !== "undefined") {
+                if (GLOBAL[field_name].type == "select") {
+                    if (one_way_return_mode) {
+                        GLOBAL[field_name].one_way.index = val;
+                        GLOBAL[field_name].one_way.values = document.getElementById(GLOBAL[field_name].one_way.form.id)[GLOBAL[field_name].one_way.index].text;
+                    }
+                    else {
+                        GLOBAL[field_name].index = val;
+                        GLOBAL[field_name].values = document.getElementById(GLOBAL[field_name].form.id)[GLOBAL[field_name].index].text;
+                    }
+                }
+                else {
+                    if (one_way_return_mode)
+                        GLOBAL[field_name].one_way.values = val;
+                    else
+                        GLOBAL[field_name].values = val;
+                }
+            }
+        }
+    }
+
+    function get_param(param_key) {
+        let current_url = new URL(window.location.href);
+        const raw_value = current_url.searchParams.get(param_key);
+        let value;
+        try {
+            value = eval(raw_value);
+            // Date is eval as number -> if it is the case => keep string type
+            if (typeof (value) === typeof (1))
+                value = raw_value;
+        }
+        catch (error) {
+            value = raw_value;
+        }
+        return value;
+    }
+</script>
+
+<script type="text/javascript">
+    function update_html_content(element, field_name, one_way_return_mode = false, mode = "one_way") {
+        switch (GLOBAL[field_name].type) {
+            case "select":
+                console.log("SELECT MODIF ", element, GLOBAL[field_name][mode].index, GLOBAL[field_name].index);
+                if (one_way_return_mode) element.selectedIndex = GLOBAL[field_name][mode].index;
+                else element.selectedIndex = GLOBAL[field_name].index;
+                break;
+
+            case "check":
+                // Checkbox field id is not in the input, we have to refind the element
+                const checkbox_element = document.querySelector("#" + GLOBAL[field_name].form.id + " > span > input");
+                if (one_way_return_mode) checkbox_element.checked = GLOBAL[field_name][mode].values;
+                else checkbox_element.checked = GLOBAL[field_name].values;
+                break;
+
+            case "date":
+                console.log(element, field_name, one_way_return_mode, mode, GLOBAL[field_name][mode].values);
+                if (one_way_return_mode) element.value = GLOBAL[field_name][mode].values;
+                else element.value = GLOBAL[field_name].values;
+                break;
+
+            case "textarea":
+                if (one_way_return_mode) element.value = GLOBAL[field_name][mode].values;
+                else element.value = GLOBAL[field_name].values;
+                break;
+
+            case "number":
+                if (one_way_return_mode) element.value = GLOBAL[field_name][mode].values;
+                else element.value = GLOBAL[field_name].values;
+                break;
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    function pre_fill_fields() {
+
+        for (let i in FIELDS_KEYS) {
+
+            const field_name = FIELDS_KEYS[i];
+            const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+            let element;
+            if (one_way_return_mode) element = document.getElementById(GLOBAL[field_name].one_way.form.id);
+            else element = document.getElementById(GLOBAL[field_name].form.id);
+
+            update_html_content(element, field_name, one_way_return_mode);
+
+            // Reverse field for return booked
+            reverse_dep_ret_location();
+        }
+    }
+
+    function reverse_dep_ret_location() {
+        if (GLOBAL.book_return.values) {
+            let ret_pickup_location = document.getElementById(GLOBAL.pickup_location.return.form.id);
+            let ret_drop_location = document.getElementById(GLOBAL.drop_location.return.form.id);
+
+            ret_pickup_location.selectedIndex = GLOBAL.drop_location.one_way.index;
+            ret_drop_location.selectedIndex = GLOBAL.pickup_location.one_way.index;
+
+            from_html_update_global("pickup_location-return", ret_pickup_location);
+            from_html_update_global("drop_location-return", ret_drop_location);
+
+            update_html();
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    // Input "field_name-mode" (return or one_way) | "field_name"
+    // input type: "html" or "value"
+    function update_global(cmd, input_type, input) {
+        // Decode cmd
+        let field_name = cmd;
+        let mode;
+        const field_and_mode = cmd.split('-');
+
+        if (field_and_mode.length > 1) {
+            field_name = field_and_mode[0];
+            mode = field_and_mode[1];
+        }
+        const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+        switch (GLOBAL[field_name].type) {
+            case "select":
+                if (one_way_return_mode) {
+                    if (mode === "one_way") {
+                        if(input_type === "html"){
+                            GLOBAL[field_name].one_way.index = input.selectedIndex;
+                            GLOBAL[field_name].one_way.values = input[input.selectedIndex].text;
+                        }
+                        else if (input_type === "value"){
+                            // For select value update index and text 
+                            GLOBAL[field_name].one_way.index = input;
+                            GLOBAL[field_name].one_way.values = input;
+                        }
+                    }
+                    else if (mode === "return") {
+                        if (input_type === "html") {
+                            GLOBAL[field_name].return.index = input.selectedIndex;
+                            GLOBAL[field_name].return.values = input[input.selectedIndex].text;
+                        }
+                        else if (input_type === "value") {
+                            // For select value update index and text 
+                            GLOBAL[field_name].return.index = input;
+                            GLOBAL[field_name].return.values = input;
+                        }
+                    }
+                }
+                else {
+                    if (input_type === "html") {
+                        GLOBAL[field_name].index = input.selectedIndex;
+                        GLOBAL[field_name].values = input[input.selectedIndex].text;
+                    }
+                    else if (input_type === "value") {
+                        // For select value update index and text 
+                        GLOBAL[field_name].index = input;
+                        GLOBAL[field_name].values = input;
+                    }
+                }
+                break;
+
+            case "check":
+                if (one_way_return_mode) {
+                    if (mode == "one_way"){
+                        if (input_type === "html") 
+                            GLOBAL[field_name].one_way.values = input.checked;
+                        else if (input_type === "value") 
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.checked;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.checked;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }    
+                break;
+
+            case "date":
+                if (one_way_return_mode) {
+                    if (mode == "one_way"){
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else{
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;                  
+                } 
+                break;
+
+            case "textarea":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+            case "number":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+        }
+    }
+
+    function from_html_update_global(cmd, html){
+        update_global(cmd, "html", html);
+    }
+
+    function from_value_update_global(cmd, value){
+        update_global(cmd, "value", value);
+    }
+</script>
+
+<script type="text/javascript">
+    function update_html() {
+        // Return Active
+        if (GLOBAL.book_return.values) {
+            // Display Return -> PickUp Location / Drop Location / Date / Hours / Minutes / PickUp Address / Drop Address
+            html_visibility("pickup_location-return", true);
+            html_visibility("drop_location-return", true);
+
+            html_visibility("pickup_date-return", true);
+            html_visibility("departure_hours-return", true);
+            html_visibility("departure_minutes-return", true);
+        }
+        else {
+            html_visibility("pickup_location-return", false);
+            html_visibility("drop_location-return", false);
+
+            html_visibility("pickup_date-return", false);
+            html_visibility("departure_hours-return", false);
+            html_visibility("departure_minutes-return", false);
+
+            // Disney
+            html_visibility("pickup_disney_location-return", false);
+            html_visibility("drop_disney_location-return", false);
+
+            // Flight
+            html_visibility("drop_flight_departure_to-return", false);
+            html_visibility("drop_flight_no-return", false);
+            html_visibility("pickup_flight_arrival_from-return", false);
+            html_visibility("pickup_flight_no-return", false);
+        }
+
+        /* FLIGHT */
+        // Flight departure (pickup) One Way
+        const dep_pickup_flight = FLIGHT_LOCATIONS.includes(GLOBAL.pickup_location.one_way.values);
+        html_visibility("pickup_flight_arrival_from-one_way", dep_pickup_flight);
+        html_visibility("pickup_flight_no-one_way", dep_pickup_flight);
+
+        // Flight arrival (drop) One Way 
+        const dep_drop_flight = FLIGHT_LOCATIONS.includes(GLOBAL.drop_location.one_way.values);
+        html_visibility("drop_flight_departure_to-one_way", dep_drop_flight);
+        html_visibility("drop_flight_no-one_way", dep_drop_flight);
+
+        // Flight departure (pickup) Return
+        const ret_pickup_flight = FLIGHT_LOCATIONS.includes(GLOBAL.pickup_location.return.values);
+        html_visibility("pickup_flight_arrival_from-return", ret_pickup_flight);
+        html_visibility("pickup_flight_no-return", ret_pickup_flight);
+
+        // Flight arrival (drop) Return 
+        const ret_drop_flight = FLIGHT_LOCATIONS.includes(GLOBAL.drop_location.return.values);
+        html_visibility("drop_flight_departure_to-return", ret_drop_flight);
+        html_visibility("drop_flight_no-return", ret_drop_flight);
+
+        /* DISNEY */
+        // Disney PickUp One Way
+        const dep_pickup_disney = DISNEY_LOCATIONS.includes(GLOBAL.pickup_location.one_way.values);
+        html_visibility("pickup_disney_location-one_way", dep_pickup_disney);
+
+        // Disney Drop One Way
+        const dep_drop_disney = DISNEY_LOCATIONS.includes(GLOBAL.drop_location.one_way.values);
+        html_visibility("drop_disney_location-one_way", dep_drop_disney);
+
+        // Disney PickUp Return
+        const ret_pickup_disney = DISNEY_LOCATIONS.includes(GLOBAL.pickup_location.return.values);
+        html_visibility("pickup_disney_location-return", ret_pickup_disney);
+
+        // Disney Drop Return
+        const ret_drop_disney = DISNEY_LOCATIONS.includes(GLOBAL.drop_location.return.values);
+        html_visibility("drop_disney_location-return", ret_drop_disney);
+
+        /* CLASSIC */
+        // Classic PickUp One Way
+        const dep_pickup_classic = CLASSIC_LOCATIONS.includes(GLOBAL.pickup_location.one_way.values);
+        html_visibility("pickup_address-one_way", dep_pickup_classic);
+
+        // Classic Drop One Way
+        const dep_drop_classic = CLASSIC_LOCATIONS.includes(GLOBAL.drop_location.one_way.values);
+        html_visibility("drop_address-one_way", dep_drop_classic);
+
+        // Classic PickUp Return
+        const ret_pickup_classic = CLASSIC_LOCATIONS.includes(GLOBAL.pickup_location.return.values);
+        html_visibility("pickup_address-return", ret_pickup_classic);
+
+        // Classic Drop Return
+        const ret_drop_classic = CLASSIC_LOCATIONS.includes(GLOBAL.drop_location.return.values);
+        html_visibility("drop_address-return", ret_drop_classic);
+    }
+
+    function html_visibility(fields, state) {
+        let field_name = fields;
+        let mode;
+        const field_and_mode = fields.split('-');
+        if (field_and_mode.length > 1) {
+            field_name = field_and_mode[0];
+            mode = field_and_mode[1];
+        }
+        const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+        // Get html of the element
+        let ctn_html_element;
+        let form_html_element;
+
+        if (one_way_return_mode) {
+            ctn_html_element = document.getElementById(GLOBAL[field_name][mode].ctn.id);
+            form_html_element = document.getElementById(GLOBAL[field_name][mode].form.id);
+        }
+        else {
+            ctn_html_element = document.getElementById(GLOBAL[field_name].ctn.id);
+            form_html_element = document.getElementById(GLOBAL[field_name].form.id);
+        }
+
+
+        if (ctn_html_element != undefined && ctn_html_element != null) {
+            if (state)
+                ctn_html_element.style.display = "block";
+            else {
+                ctn_html_element.style.display = "none";
+                from_value_update_global(fields, "");
+                update_html_content(form_html_element, field_name, one_way_return_mode, mode);
+            }
+        }
+    }
+</script>

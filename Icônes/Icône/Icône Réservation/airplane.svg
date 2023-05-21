@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg9"
+   xml:space="preserve"
+   width="682.66669"
+   height="682.66669"
+   viewBox="0 0 682.66669 682.66669"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs13"><clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath23"><path
+         d="M 0,512 H 512 V 0 H 0 Z"
+         id="path21" /></clipPath></defs><g
+     id="g15"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><g
+       id="g17"><g
+         id="g19"
+         clip-path="url(#clipPath23)"><g
+           id="g25"
+           transform="translate(464.8633,497)"><path
+             d="m 0,0 c -20.572,0 -40.302,-8.17 -54.85,-22.718 -73.273,-73.272 -298.613,-298.615 -298.613,-298.615 h -64.283 c -17.737,0 -32.117,-14.38 -32.117,-32.118 v -0.016 l 80.333,-48.2 48.2,-80.333 c 8.522,0 16.696,3.382 22.722,9.415 6.026,6.025 9.411,14.195 9.411,22.718 v 64.267 c 0,0 225.341,225.343 298.614,298.615 14.547,14.548 22.72,34.278 22.72,54.852 v 0.016 C 32.137,-14.379 17.757,0 0.02,0 H 0.003 Z"
+             style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path27" /></g><g
+           id="g29"
+           transform="translate(320.2666,384.5332)"><path
+             d="m 0,0 c 0,0 -136.776,32.182 -216.749,51.004 -33.904,7.976 -69.195,-5.953 -88.514,-34.929 -0.003,-0.008 -0.004,-0.008 -0.004,-0.008 L -96.4,-96.4"
+             style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path31" /></g><g
+           id="g33"
+           transform="translate(384.5332,320.2666)"><path
+             d="m 0,0 c 0,0 32.183,-136.775 51,-216.748 7.978,-33.908 -5.949,-69.198 -34.928,-88.519 H 16.067 L -96.4,-96.4"
+             style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path35" /></g></g></g></g></svg>

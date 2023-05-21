@@ -1,0 +1,234 @@
+<label id="dep_pickup_location_ctn">
+    [select dep_pickup_location id:dep_pickup_location default:0 "Lieu de prise
+    en charge"
+    "PARIS" "DISNEY" "ORLY" "CDG" "BEAUVAIS" "LA DEFENSE" "VERSAILLES" "GIVERNY"
+    "DEAUVILLE" "PARIS TRAIN STATION" "FONTAINEBLEAU"]
+</label>          
+<label id="passengers_ctn">
+    [number passengers min:1 max:8 id:passengers "1"]
+</label>
+<label id="dep_drop_location_ctn">
+    [select dep_drop_location id:dep_drop_location default:0 "Où allez-vous ?"
+    "PARIS" "DISNEY" "ORLY" "CDG" "BEAUVAIS" "LA DEFENSE" "VERSAILLES" "GIVERNY"
+    "DEAUVILLE" "PARIS TRAIN STATION"
+    "FONTAINEBLEAU"]
+</label>
+<label id="luggages_ctn">
+    [number luggages min:0 max:7 id:luggages "1"]
+</label>
+<label id="book_return_ctn">
+    [checkbox book_return id:book_return "Réserver un aller / retour"]
+</label>                      
+<label id="dep_pickup_date_ctn">
+    [date dep_pickup_date id:dep_pickup_date]
+</label>
+<label id="dep_departure_hours_ctn">
+    [select dep_departure_hours id:dep_departure_hours "--:--" "00:00" "00:15" "00:30"
+    "00:45" "01:00" "01:15"
+    "01:30"
+    "01:45" "02:00"
+    "02:15" "02:30" "02:45" "03:00" "03:15" "03:30" "03:45" "04:00" "04:15" "04:30"
+    "04:45" "05:00"
+    "05:15" "05:30"
+    "05:45"
+    "06:00" "06:15" "06:30" "06:45" "07:00" "07:15" "07:30" "07:45" "08:00" "08:15"
+    "08:30" "08:45"
+    "09:00" "09:15"
+    "09:30"
+    "09:45" "10:00" "10:15" "10:30" "10:45" "11:00" "11:15" "11:30" "11:45" "12:00"
+    "12:15" "12:30"
+    "12:45" "13:00"
+    "13:15"
+    "13:30" "13:45" "14:00" "14:15" "14:30" "14:45" "15:00" "15:15" "15:30" "15:45"
+    "16:00" "16:15"
+    "16:30" "16:45"
+    "17:00"
+    "17:15" "17:30" "17:45" "18:00" "18:15" "18:30" "18:45" "19:00" "19:15" "19:30"
+    "19:45" "20:00"
+    "20:15" "20:30"
+    "20:45"
+    "21:00" "21:15" "21:30" "21:45" "22:00" "22:15" "22:30" "22:45" "23:00" "23:15"
+    "23:30" "23:45"]
+</label>            
+<label class="little_indent">
+    [textarea dep_pickup_address id:dep_pickup_address placeholder "saisissez
+    l'adresse..."]
+</label>
+<label class="little_indent">
+    [textarea dep_drop_address id:dep_drop_address placeholder "saisissez l'adresse..."]
+</label>
+<label class="little_indent">
+    [textarea dep_pickup_flight_no id:dep_pickup_flight_no]
+</label>
+<label>
+    [textarea dep_pickup_flight_arrival_from id:dep_pickup_flight_arrival_from]
+</label>                
+<label class="little_indent">
+    [textarea dep_drop_flight_no id:dep_drop_flight_no]
+</label>
+<label>
+    [textarea dep_drop_flight_departure_to id:dep_drop_flight_departure_to]
+</label>                                
+<label class="little_indent">
+    [textarea dep_pickup_train_no id:dep_pickup_train_no]
+</label>
+<label>
+    [textarea dep_pickup_train_arrival_from id:dep_pickup_train_arrival_from]
+</label>
+<label>
+    [textarea dep_pickup_train_station id:dep_pickup_train_station]
+</label>
+<label class="little_indent">
+    [textarea dep_drop_train_no id:dep_drop_train_no]
+</label>
+<label>
+    [textarea dep_drop_train_departure_to id:dep_drop_train_departure_to]
+</label>
+<label>
+    [textarea dep_drop_train_station id:dep_drop_train_station placeholder]
+</label>
+<label class="little_indent">
+    [select dep_pickup_disney_location id:dep_pickup_disney_location default:0
+    "Disney mode select"
+    "a" "b"]
+</label>izontal_direction nowrap">
+
+<label class="little_indent">
+    [select dep_drop_disney_location id:dep_drop_disney_location default:0 "Disney
+    mode select"
+    "a" "b"]
+</label>
+<label id="ret_pickup_location_ctn">
+    [select ret_pickup_location id:ret_pickup_location default:0 "Lieu de prise en
+    charge"
+    "PARIS" "DISNEY" "ORLY" "CDG" "BEAUVAIS" "LA DEFENSE" "VERSAILLES" "GIVERNY"
+    "DEAUVILLE" "PARIS TRAIN STATION"
+    "FONTAINEBLEAU"]
+</label>
+   
+
+
+                                    <label id="ret_drop_location_ctn">
+                                        [select ret_drop_location id:ret_drop_location default:0 "Où allez-vous ?"
+                                        "PARIS" "DISNEY" "ORLY" "CDG" "BEAUVAIS" "LA DEFENSE" "VERSAILLES" "GIVERNY"
+                                        "DEAUVILLE" "PARIS TRAIN STATION"
+                                        "FONTAINEBLEAU"]
+                                    </label>
+
+                        <label id="ret_pickup_date_ctn">
+                            [date ret_pickup_date id:ret_pickup_date]
+                        </label>
+                
+                        <label id="ret_departure_hours_ctn">
+                            [select ret_departure_hours id:ret_departure_hours "--:--" "00:00" "00:15" "00:30"
+                            "00:45" "01:00" "01:15"
+                            "01:30"
+                            "01:45" "02:00"
+                            "02:15" "02:30" "02:45" "03:00" "03:15" "03:30" "03:45" "04:00" "04:15" "04:30"
+                            "04:45" "05:00"
+                            "05:15" "05:30"
+                            "05:45"
+                            "06:00" "06:15" "06:30" "06:45" "07:00" "07:15" "07:30" "07:45" "08:00" "08:15"
+                            "08:30" "08:45"
+                            "09:00" "09:15"
+                            "09:30"
+                            "09:45" "10:00" "10:15" "10:30" "10:45" "11:00" "11:15" "11:30" "11:45" "12:00"
+                            "12:15" "12:30"
+                            "12:45" "13:00"
+                            "13:15"
+                            "13:30" "13:45" "14:00" "14:15" "14:30" "14:45" "15:00" "15:15" "15:30" "15:45"
+                            "16:00" "16:15"
+                            "16:30" "16:45"
+                            "17:00"
+                            "17:15" "17:30" "17:45" "18:00" "18:15" "18:30" "18:45" "19:00" "19:15" "19:30"
+                            "19:45" "20:00"
+                            "20:15" "20:30"
+                            "20:45"
+                            "21:00" "21:15" "21:30" "21:45" "22:00" "22:15" "22:30" "22:45" "23:00" "23:15"
+                            "23:30" "23:45"]
+                        </label>
+                    
+                        <label class="little_indent">
+                            [textarea ret_pickup_address id:ret_pickup_address placeholder "saisissez
+                            l'adresse..."]
+                        </label>     
+
+                        <label class="little_indent">
+                            [textarea ret_drop_address id:ret_drop_address placeholder "saisissez l'adresse..."]
+                        </label>
+                    
+
+                        <label class="little_indent">
+                            [textarea ret_pickup_flight_no id:ret_pickup_flight_no]
+                        </label>
+                        
+                        <label>
+                            [textarea ret_pickup_flight_arrival_from id:ret_pickup_flight_arrival_from]
+                        </label>
+                    
+
+                        <label>
+                            [textarea ret_drop_flight_no id:ret_drop_flight_no]
+                        </label>
+                        
+                        <label>
+                            [textarea ret_drop_flight_departure_to id:ret_drop_flight_departure_to]
+                        </label>
+                    
+                        <label class="little_indent">
+                            [textarea ret_pickup_train_no id:ret_pickup_train_no]
+                        </label>
+                        
+                        <label>
+                            [textarea ret_pickup_train_arrival_from id:ret_pickup_train_arrival_from]
+                        </label>
+                    
+                        <label>
+                            [textarea ret_pickup_train_station id:ret_pickup_train_station]
+                        </label>
+                           
+                    <label class="little_indent">
+                        [textarea ret_drop_train_no id:ret_drop_train_no]
+                    </label>
+                                
+                    <label>
+                        [textarea ret_drop_train_departure_to id:ret_drop_train_departure_to]
+                    </label>
+                
+                    <label>
+                        [textarea ret_drop_train_station id:ret_drop_train_station placeholder]
+                    </label>
+                
+                    <label class="little_indent">
+                        [select ret_pickup_disney_location id:ret_pickup_disney_location default:0
+                        "Disney mode select"
+                        "a" "b"]
+                    </label>
+                
+                    <label class="little_indent">
+                        [select ret_drop_disney_location id:ret_drop_disney_location default:0 "Disney
+                        mode select"
+                        "a" "b"]
+                    </label>
+                               
+                    <label id="client_name_ctn" class="little_indent">
+                        [textarea client_name id:client_name placeholder "DUPONT Antoine"]
+                    </label>
+                
+                    <label id="email_ctn" class="little_indent">
+                        [email email id:email placeholder "dupont@gmail.com"]
+                    </label>
+                
+                    <label id="phone_number_ctn" class="little_indent">
+                        [phonetext phone_number id:phone_number numberonly]
+                    </label>
+                
+                    <label id="country_ctn" class="little_indent">
+                        [countrytext country id:country]
+                    </label>
+                     
+                    <label>
+                        [submit id:submit_btn "Réserver"]
+                    </label>
+                  
+

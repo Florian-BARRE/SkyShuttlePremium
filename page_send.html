@@ -1,0 +1,1526 @@
+<!-- Global and Prices storage -->
+<script type="text/javascript">
+            const PRICES = {
+                "transfers": {
+                    "City of Paris": {
+                        "City of Paris": {
+                            "1": { "price": 60 },
+                            "2": { "price": 60 },
+                            "3": { "price": 60 },
+                            "4": { "price": 65 },
+                            "5": { "price": 65 },
+                            "6": { "price": 65 },
+                            "7": { "price": 70 },
+                            "8": { "price": 70 },
+                        },
+                        "Disneyland Park / Hotel": {
+                            "1": { "price": 80 },
+                            "2": { "price": 80 },
+                            "3": { "price": 80 },
+                            "4": { "price": 85 },
+                            "5": { "price": 90 },
+                            "6": { "price": 95 },
+                            "7": { "price": 100 },
+                            "8": { "price": 100 },
+                        },
+                        "Orly": {
+                            "1": { "price": 70 },
+                            "2": { "price": 70 },
+                            "3": { "price": 70 },
+                            "4": { "price": 75 },
+                            "5": { "price": 80 },
+                            "6": { "price": 85 },
+                            "7": { "price": 90 },
+                            "8": { "price": 95 },
+                        },
+                        "Charles de Gaulle": {
+                            "1": { "price": 75 },
+                            "2": { "price": 75 },
+                            "3": { "price": 75 },
+                            "4": { "price": 80 },
+                            "5": { "price": 85 },
+                            "6": { "price": 90 },
+                            "7": { "price": 95 },
+                            "8": { "price": 100 },
+                        },
+                        "Beauvais": {
+                            "1": { "price": 150 },
+                            "2": { "price": 150 },
+                            "3": { "price": 150 },
+                            "4": { "price": 155 },
+                            "5": { "price": 160 },
+                            "6": { "price": 165 },
+                            "7": { "price": 170 },
+                            "8": { "price": 175 },
+                        },
+                        "La Défense": {
+                            "1": { "price": 70 },
+                            "2": { "price": 70 },
+                            "3": { "price": 70 },
+                            "4": { "price": 75 },
+                            "5": { "price": 75 },
+                            "6": { "price": 80 },
+                            "7": { "price": 80 },
+                            "8": { "price": 85 },
+                        },
+                        "Versailles": {
+                            "1": { "price": 80 },
+                            "2": { "price": 80 },
+                            "3": { "price": 80 },
+                            "4": { "price": 85 },
+                            "5": { "price": 90 },
+                            "6": { "price": 95 },
+                            "7": { "price": 100 },
+                            "8": { "price": 105 },
+                        },
+                        "Giverny": {
+                            "1": { "price": 160 },
+                            "2": { "price": 160 },
+                            "3": { "price": 160 },
+                            "4": { "price": 165 },
+                            "5": { "price": 170 },
+                            "6": { "price": 175 },
+                            "7": { "price": 180 },
+                            "8": { "price": 185 },
+                        },
+                        "Deauville": {
+                            "1": { "price": 550 },
+                            "2": { "price": 550 },
+                            "3": { "price": 550 },
+                            "4": { "price": 600 },
+                            "5": { "price": 600 },
+                            "6": { "price": 650 },
+                            "7": { "price": 700 },
+                            "8": { "price": 750 },
+                        },
+                        "Train Station": {
+                            "1": { "price": 60 },
+                            "2": { "price": 60 },
+                            "3": { "price": 60 },
+                            "4": { "price": 65 },
+                            "5": { "price": 65 },
+                            "6": { "price": 65 },
+                            "7": { "price": 70 },
+                            "8": { "price": 70 },
+                        },
+                        "Fontainebleau": {
+                            "1": { "price": 140 },
+                            "2": { "price": 140 },
+                            "3": { "price": 140 },
+                            "4": { "price": 145 },
+                            "5": { "price": 145 },
+                            "6": { "price": 150 },
+                            "7": { "price": 155 },
+                            "8": { "price": 155 },
+                        }
+                    },
+                    "Disneyland Park / Hotel": {
+                        "City of Paris": {
+                            "1": { "price": 80 },
+                            "2": { "price": 80 },
+                            "3": { "price": 80 },
+                            "4": { "price": 85 },
+                            "5": { "price": 90 },
+                            "6": { "price": 95 },
+                            "7": { "price": 100 },
+                            "8": { "price": 100 },
+                        },
+                        "Orly": {
+                            "1": { "price": 80 },
+                            "2": { "price": 80 },
+                            "3": { "price": 80 },
+                            "4": { "price": 85 },
+                            "5": { "price": 90 },
+                            "6": { "price": 95 },
+                            "7": { "price": 100 },
+                            "8": { "price": 105 },
+                        },
+                        "Charles de Gaulle": {
+                            "1": { "price": 75 },
+                            "2": { "price": 75 },
+                            "3": { "price": 75 },
+                            "4": { "price": 80 },
+                            "5": { "price": 85 },
+                            "6": { "price": 90 },
+                            "7": { "price": 95 },
+                            "8": { "price": 100 },
+                        },
+                        "Beauvais": {
+                            "1": { "price": 150 },
+                            "2": { "price": 150 },
+                            "3": { "price": 150 },
+                            "4": { "price": 150 },
+                            "5": { "price": 160 },
+                            "6": { "price": 170 },
+                            "7": { "price": 170 },
+                            "8": { "price": 170 },
+                        }
+                    },
+                    "Orly": {
+                        "City of Paris": {
+                            "1": { "price": 70 },
+                            "2": { "price": 70 },
+                            "3": { "price": 70 },
+                            "4": { "price": 75 },
+                            "5": { "price": 80 },
+                            "6": { "price": 85 },
+                            "7": { "price": 90 },
+                            "8": { "price": 95 },
+                        },
+                        "Disneyland Park / Hotel": {
+                            "1": { "price": 80 },
+                            "2": { "price": 80 },
+                            "3": { "price": 80 },
+                            "4": { "price": 85 },
+                            "5": { "price": 90 },
+                            "6": { "price": 95 },
+                            "7": { "price": 100 },
+                            "8": { "price": 105 },
+                        },
+                        "La Défense": {
+                            "1": { "price": 75 },
+                            "2": { "price": 75 },
+                            "3": { "price": 75 },
+                            "4": { "price": 80 },
+                            "5": { "price": 85 },
+                            "6": { "price": 90 },
+                            "7": { "price": 95 },
+                            "8": { "price": 100 },
+                        },
+                        "Charles de Gaulle": {
+                            "1": { "price": 95 },
+                            "2": { "price": 95 },
+                            "3": { "price": 100 },
+                            "4": { "price": 105 },
+                            "5": { "price": 110 },
+                            "6": { "price": 115 },
+                            "7": { "price": 120 },
+                            "8": { "price": 125 },
+                        },
+                        "Beauvais": {
+                            "1": { "price": 155 },
+                            "2": { "price": 155 },
+                            "3": { "price": 155 },
+                            "4": { "price": 160 },
+                            "5": { "price": 165 },
+                            "6": { "price": 170 },
+                            "7": { "price": 175 },
+                            "8": { "price": 180 },
+                        },
+                        "Versailles": {
+                            "1": { "price": 75 },
+                            "2": { "price": 75 },
+                            "3": { "price": 75 },
+                            "4": { "price": 80 },
+                            "5": { "price": 85 },
+                            "6": { "price": 90 },
+                            "7": { "price": 95 },
+                            "8": { "price": 100 },
+                        },
+                        "Train Station": {
+                            "1": { "price": 70 },
+                            "2": { "price": 70 },
+                            "3": { "price": 70 },
+                            "4": { "price": 75 },
+                            "5": { "price": 80 },
+                            "6": { "price": 85 },
+                            "7": { "price": 90 },
+                            "8": { "price": 95 },
+                        }
+                    },
+                    "Charles de Gaulle": {
+                        "City of Paris": {
+                            "1": { "price": 75 },
+                            "2": { "price": 75 },
+                            "3": { "price": 75 },
+                            "4": { "price": 80 },
+                            "5": { "price": 85 },
+                            "6": { "price": 90 },
+                            "7": { "price": 95 },
+                            "8": { "price": 100 },
+                        },
+                        "Disneyland Park / Hotel": {
+                            "1": { "price": 75 },
+                            "2": { "price": 75 },
+                            "3": { "price": 75 },
+                            "4": { "price": 80 },
+                            "5": { "price": 85 },
+                            "6": { "price": 90 },
+                            "7": { "price": 95 },
+                            "8": { "price": 100 },
+                        },
+                        "Orly": {
+                            "1": { "price": 85 },
+                            "2": { "price": 85 },
+                            "3": { "price": 85 },
+                            "4": { "price": 90 },
+                            "5": { "price": 95 },
+                            "6": { "price": 100 },
+                            "7": { "price": 105 },
+                            "8": { "price": 110 },
+                        },
+                        "Beauvais": {
+                            "1": { "price": 125 },
+                            "2": { "price": 125 },
+                            "3": { "price": 125 },
+                            "4": { "price": 130 },
+                            "5": { "price": 135 },
+                            "6": { "price": 140 },
+                            "7": { "price": 145 },
+                            "8": { "price": 150 },
+                        },
+                        "La Défense": {
+                            "1": { "price": 90 },
+                            "2": { "price": 90 },
+                            "3": { "price": 90 },
+                            "4": { "price": 95 },
+                            "5": { "price": 100 },
+                            "6": { "price": 105 },
+                            "7": { "price": 110 },
+                            "8": { "price": 115 },
+                        },
+                        "Giverny": {
+                            "1": { "price": 400 },
+                            "2": { "price": 400 },
+                            "3": { "price": 400 },
+                            "4": { "price": 450 },
+                            "5": { "price": 500 },
+                            "6": { "price": 500 },
+                            "7": { "price": 500 },
+                            "8": { "price": 500 },
+                        },
+                        "Deauville": {
+                            "1": { "price": 550 },
+                            "2": { "price": 550 },
+                            "3": { "price": 550 },
+                            "4": { "price": 600 },
+                            "5": { "price": 600 },
+                            "6": { "price": 600 },
+                            "7": { "price": 650 },
+                            "8": { "price": 650 },
+                        },
+                        "Train Station": {
+                            "1": { "price": 75 },
+                            "2": { "price": 75 },
+                            "3": { "price": 75 },
+                            "4": { "price": 80 },
+                            "5": { "price": 85 },
+                            "6": { "price": 90 },
+                            "7": { "price": 95 },
+                            "8": { "price": 100 },
+                        }
+                    },
+                    "Beauvais": {
+                        "City of Paris": {
+                            "1": { "price": 150 },
+                            "2": { "price": 150 },
+                            "3": { "price": 150 },
+                            "4": { "price": 155 },
+                            "5": { "price": 160 },
+                            "6": { "price": 165 },
+                            "7": { "price": 170 },
+                            "8": { "price": 175 },
+                        },
+                        "Disneyland Park / Hotel": {
+                            "1": { "price": 150 },
+                            "2": { "price": 150 },
+                            "3": { "price": 150 },
+                            "4": { "price": 150 },
+                            "5": { "price": 160 },
+                            "6": { "price": 170 },
+                            "7": { "price": 170 },
+                            "8": { "price": 170 },
+                        },
+                        "Orly": {
+                            "1": { "price": 155 },
+                            "2": { "price": 155 },
+                            "3": { "price": 155 },
+                            "4": { "price": 155 },
+                            "5": { "price": 165 },
+                            "6": { "price": 165 },
+                            "7": { "price": 175 },
+                            "8": { "price": 175 },
+                        },
+                        "Charles de Gaulle": {
+                            "1": { "price": 125 },
+                            "2": { "price": 125 },
+                            "3": { "price": 125 },
+                            "4": { "price": 130 },
+                            "5": { "price": 135 },
+                            "6": { "price": 140 },
+                            "7": { "price": 145 },
+                            "8": { "price": 150 },
+                        },
+                        "La Défense": {
+                            "1": { "price": 130 },
+                            "2": { "price": 130 },
+                            "3": { "price": 130 },
+                            "4": { "price": 135 },
+                            "5": { "price": 140 },
+                            "6": { "price": 140 },
+                            "7": { "price": 145 },
+                            "8": { "price": 150 },
+                        },
+                        "Versailles": {
+                            "1": { "price": 160 },
+                            "2": { "price": 160 },
+                            "3": { "price": 160 },
+                            "4": { "price": 165 },
+                            "5": { "price": 170 },
+                            "6": { "price": 175 },
+                            "7": { "price": 180 },
+                            "8": { "price": 185 },
+                        },
+                        "Giverny": {
+                            "1": { "price": 140 },
+                            "2": { "price": 140 },
+                            "3": { "price": 140 },
+                            "4": { "price": 145 },
+                            "5": { "price": 150 },
+                            "6": { "price": 155 },
+                            "7": { "price": 160 },
+                            "8": { "price": 165 },
+                        },
+                        "Train Station": {
+                            "1": { "price": 150 },
+                            "2": { "price": 150 },
+                            "3": { "price": 150 },
+                            "4": { "price": 155 },
+                            "5": { "price": 160 },
+                            "6": { "price": 165 },
+                            "7": { "price": 170 },
+                            "8": { "price": 175 },
+                        }
+                    },
+                    "Train Station": {
+                        "City of Paris": {
+                            "1": { "price": 60 },
+                            "2": { "price": 60 },
+                            "3": { "price": 60 },
+                            "4": { "price": 65 },
+                            "5": { "price": 65 },
+                            "6": { "price": 65 },
+                            "7": { "price": 70 },
+                            "8": { "price": 70 },
+                        },
+                        "Disneyland Park / Hotel": {
+                            "1": { "price": 80 },
+                            "2": { "price": 80 },
+                            "3": { "price": 80 },
+                            "4": { "price": 85 },
+                            "5": { "price": 90 },
+                            "6": { "price": 95 },
+                            "7": { "price": 100 },
+                            "8": { "price": 100 },
+                        },
+                        "Orly": {
+                            "1": { "price": 70 },
+                            "2": { "price": 70 },
+                            "3": { "price": 70 },
+                            "4": { "price": 75 },
+                            "5": { "price": 80 },
+                            "6": { "price": 85 },
+                            "7": { "price": 90 },
+                            "8": { "price": 95 },
+                        },
+                        "Charles de Gaulle": {
+                            "1": { "price": 75 },
+                            "2": { "price": 75 },
+                            "3": { "price": 75 },
+                            "4": { "price": 80 },
+                            "5": { "price": 85 },
+                            "6": { "price": 90 },
+                            "7": { "price": 95 },
+                            "8": { "price": 100 },
+                        },
+                        "Beauvais": {
+                            "1": { "price": 150 },
+                            "2": { "price": 150 },
+                            "3": { "price": 150 },
+                            "4": { "price": 155 },
+                            "5": { "price": 160 },
+                            "6": { "price": 165 },
+                            "7": { "price": 170 },
+                            "8": { "price": 175 },
+                        },
+                        "La Défense": {
+                            "1": { "price": 70 },
+                            "2": { "price": 70 },
+                            "3": { "price": 70 },
+                            "4": { "price": 75 },
+                            "5": { "price": 75 },
+                            "6": { "price": 80 },
+                            "7": { "price": 80 },
+                            "8": { "price": 85 },
+                        },
+                        "Versailles": {
+                            "1": { "price": 80 },
+                            "2": { "price": 80 },
+                            "3": { "price": 80 },
+                            "4": { "price": 85 },
+                            "5": { "price": 90 },
+                            "6": { "price": 95 },
+                            "7": { "price": 100 },
+                            "8": { "price": 105 },
+                        },
+                        "Giverny": {
+                            "1": { "price": 160 },
+                            "2": { "price": 160 },
+                            "3": { "price": 160 },
+                            "4": { "price": 165 },
+                            "5": { "price": 170 },
+                            "6": { "price": 175 },
+                            "7": { "price": 180 },
+                            "8": { "price": 185 },
+                        },
+                        "Deauville": {
+                            "1": { "price": 550 },
+                            "2": { "price": 550 },
+                            "3": { "price": 550 },
+                            "4": { "price": 600 },
+                            "5": { "price": 600 },
+                            "6": { "price": 650 },
+                            "7": { "price": 700 },
+                            "8": { "price": 750 },
+                        },
+                        "Train Station": {
+                            "1": { "price": 60 },
+                            "2": { "price": 60 },
+                            "3": { "price": 60 },
+                            "4": { "price": 65 },
+                            "5": { "price": 65 },
+                            "6": { "price": 65 },
+                            "7": { "price": 70 },
+                            "8": { "price": 70 },
+                        },
+                        "Fontainebleau": {
+                            "1": { "price": 140 },
+                            "2": { "price": 140 },
+                            "3": { "price": 140 },
+                            "4": { "price": 145 },
+                            "5": { "price": 145 },
+                            "6": { "price": 150 },
+                            "7": { "price": 155 },
+                            "8": { "price": 155 },
+                        }
+                    },
+                },
+                "extra_prices": {
+                    "night": {
+                        "0": 15,
+                        "1": 15,
+                        "2": 15,
+                        "3": 15,
+                        "4": 15,
+                        "5": 15,
+                        "6": 15,
+                        "7": 0,
+                        "8": 0,
+                        "9": 0,
+                        "10": 0,
+                        "11": 0,
+                        "12": 0,
+                        "13": 0,
+                        "14": 0,
+                        "15": 0,
+                        "16": 0,
+                        "17": 0,
+                        "18": 0,
+                        "19": 0,
+                        "20": 0,
+                        "21": 0,
+                        "22": 15,
+                        "23": 15
+                    }
+                }
+            };
+        
+    var GLOBAL = {
+        "pickup_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_pickup_location" },
+                "ctn": { "id": "dep_pickup_location_ctn" },
+                "values": "",
+                "index": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_location" },
+                "ctn": { "id": "ret_pickup_location_ctn" },
+                "values": "",
+                "index": ""
+            }
+        },
+        "drop_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_drop_location" },
+                "ctn": { "id": "dep_drop_location_ctn" },
+                "values": "",
+                "index": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_location" },
+                "ctn": { "id": "ret_drop_location_ctn" },
+                "values": "",
+                "index": ""
+            }
+        },
+        "passengers": { // Peut etre que sens aller -> dans ce cas là
+            "type": "number",
+            "form": { "id": "passengers" },
+            "ctn": { "id": "passengers_ctn" },
+            "values": "1"
+        },
+        "luggages": {
+            "type": "number",
+            "form": { "id": "luggages" },
+            "ctn": { "id": "luggages_ctn" },
+            "values": "1"
+        },
+        "pickup_date": {
+            "type": "date",
+            "one_way": {
+                "form": { "id": "dep_pickup_date" },
+                "ctn": { "id": "dep_pickup_date_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_date" },
+                "ctn": { "id": "ret_pickup_date_ctn" },
+                "values": ""
+            }
+        },
+        "departure_hours": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_departure_hours" },
+                "ctn": { "id": "dep_departure_hours_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_departure_hours" },
+                "ctn": { "id": "ret_departure_hours_ctn" },
+                "values": "",
+                "index": ""
+            }
+        },
+        "notes": {
+            "type": "textarea",
+            "form": { "id": "notes" },
+            "ctn": { "id": "notes_ctn" },
+            "values": ""
+        },
+        "name": {
+            "type": "textarea",
+            "form": { "id": "client_name" },
+            "ctn": { "id": "client_name_ctn" },
+            "values": ""
+        },
+        "email": {
+            "type": "textarea",
+            "form": { "id": "email" },
+            "ctn": { "id": "email_ctn" },
+            "values": ""
+        },
+        "phone_number": {
+            "type": "textarea",
+            "form": { "id": "phone_number" },
+            "ctn": { "id": "phone_number_ctn" },
+            "values": ""
+        },
+        "country": {
+            "type": "select",
+            "form": { "id": "country" },
+            "ctn": { "id": "country_ctn" },
+            "values": "",
+            "index": ""
+        },
+        "pickup_address": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_address" },
+                "ctn": { "id": "dep_pickup_address_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_address" },
+                "ctn": { "id": "ret_pickup_address_ctn" },
+                "values": ""
+            }
+        },
+        "drop_address": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_address" },
+                "ctn": { "id": "dep_drop_address_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_address" },
+                "ctn": { "id": "ret_drop_address_ctn" },
+                "values": ""
+            }
+        },
+        "pickup_flight_no": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_flight_no" },
+                "ctn": { "id": "dep_pickup_flight_no_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_flight_no" },
+                "ctn": { "id": "ret_pickup_flight_no_ctn" },
+                "values": ""
+            }
+        },
+        "drop_flight_no": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_flight_no" },
+                "ctn": { "id": "dep_drop_flight_no_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_flight_no" },
+                "ctn": { "id": "ret_drop_flight_no_ctn" },
+                "values": ""
+            }
+        },
+
+        "pickup_flight_arrival_from": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_pickup_flight_arrival_from" },
+                "ctn": { "id": "dep_pickup_flight_arrival_from_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_flight_arrival_from" },
+                "ctn": { "id": "ret_pickup_flight_arrival_from_ctn" },
+                "values": ""
+            }
+        },
+
+        "drop_flight_departure_to": {
+            "type": "textarea",
+            "one_way": {
+                "form": { "id": "dep_drop_flight_departure_to" },
+                "ctn": { "id": "dep_drop_flight_departure_to_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_flight_departure_to" },
+                "ctn": { "id": "ret_drop_flight_departure_to_ctn" },
+                "values": ""
+            }
+        },
+        "pickup_disney_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_pickup_disney_location" },
+                "ctn": { "id": "dep_pickup_disney_location_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_pickup_disney_location" },
+                "ctn": { "id": "ret_pickup_disney_location_ctn" },
+                "values": ""
+            }
+        },
+        "drop_disney_location": {
+            "type": "select",
+            "one_way": {
+                "form": { "id": "dep_drop_disney_location" },
+                "ctn": { "id": "dep_drop_disney_location_ctn" },
+                "values": ""
+            },
+            "return": {
+                "form": { "id": "ret_drop_disney_location" },
+                "ctn": { "id": "ret_drop_disney_location_ctn" },
+                "values": ""
+            }
+        },
+        "book_return": {
+            "type": "check",
+            "form": { "id": "book_return" },
+            "ctn": { "id": "book_return_ctn" },
+            "values": false
+        },
+
+    };
+</script>
+
+
+<section id="book_part" class="inline_field">
+    <div id="forms">
+        <div id="col_pickup_drop" class="col">
+            <!-- Pickup Part -->
+            <div class="vertical_field mid_col_spaces">
+                <!-- Pickup Title-->
+                <h5 class="field_title high_indent"> Lieu de prise en charge </h5>
+                <!-- Pickup Selection-->
+                <div class="inline_field">
+                    <!-- Pickup Logo -->
+                    <div>
+                        <svg class="medium_logo" viewBox="0 0 22 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="22" height="30" fill="url(#pattern0)" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_6_85"
+                                        transform="matrix(0.00304878 0 0 0.00223577 0 -0.0142276)" />
+                                </pattern>
+                                <image id="image0_6_85" width="328" height="460"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAHMCAYAAAC3NTH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAE9GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuMWI2NWE3OWI0LCAyMDIyLzA2LzEzLTIyOjAxOjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjMuNSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjMtMDEtMzBUMjM6MDU6MDQrMDE6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIzLTAxLTMwVDIzOjA1OjU5KzAxOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIzLTAxLTMwVDIzOjA1OjU5KzAxOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozNjk1N2QzNC04MzcxLTQ0N2UtOTZhZi0wYmUyYzZjNGZkNDAiIHhtcE1NOkRvY3VtZW50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" />
+                            </defs>
+                        </svg>
+                    </div>
+                    <!-- Pickup Input -->
+                    <label id="dep_pickup_location_ctn">
+                        <select name="dep_drop_location" id="dep_pickup_location" class="no_traduction" required>
+                            <option selected disabled>Lieu de prise en charge</option>
+                            <optgroup label="Paris">
+                                <option value="City of Paris">City of Paris</option>
+                                <option value="Train Station">Train Station</option>
+                            </optgroup>
+                            <optgroup label="Disneyland Paris">
+                                <option value="Disneyland Park / Hotel">Disneyland Park / Hotel</option>
+                            </optgroup>
+                            <optgroup label="Aéroport">
+                                <option value="Charles de Gaulle">Charles de Gaulle</option>
+                                <option value="Beauvais">Beauvais</option>
+                                <option value="Orly">Orly</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Drop Part -->
+            <div class="vertical_field mid_col_spaces">
+                <!-- Drop Title -->
+                <h5 class="field_title high_indent"> Lieu de destination </h5>
+                <!-- Drop Selection -->
+                <div class="inline_field">
+                    <!-- Drop Logo -->
+                    <div>
+                        <svg class="medium_logo" viewBox="0 0 22 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="22" height="30" fill="url(#pattern0)" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_6_85"
+                                        transform="matrix(0.00304878 0 0 0.00223577 0 -0.0142276)" />
+                                </pattern>
+                                <image id="image0_6_85" width="328" height="460"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAHMCAYAAAC3NTH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAE9GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuMWI2NWE3OWI0LCAyMDIyLzA2LzEzLTIyOjAxOjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjMuNSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjMtMDEtMzBUMjM6MDU6MDQrMDE6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIzLTAxLTMwVDIzOjA1OjU5KzAxOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIzLTAxLTMwVDIzOjA1OjU5KzAxOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozNjk1N2QzNC04MzcxLTQ0N2UtOTZhZi0wYmUyYzZjNGZkNDAiIHhtcE1NOkRvY3VtZW50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" />
+                            </defs>
+                        </svg>
+                    </div>
+                    <!-- Drop Input -->
+                    <div>
+                        <!-- Drop Input --> 
+                        <label id="dep_drop_location_ctn">
+                            <select name="dep_drop_location" id="dep_drop_location" class="no_traduction" required>
+                                <option selected disabled>Où allez-vous ?</option>
+                                <optgroup label="Paris">
+                                    <option value="City of Paris">City of Paris</option>
+                                    <option value="Train Station">Train Station</option>
+                                </optgroup>
+                                <optgroup label="Disneyland Paris">
+                                    <option value="Disneyland Park / Hotel">Disneyland Park / Hotel</option>
+                                </optgroup>
+                                <optgroup label="Aéroport">
+                                    <option value="Charles de Gaulle">Charles de Gaulle</option>
+                                    <option value="Beauvais">Beauvais</option>
+                                    <option value="Orly">Orly</option>
+                                </optgroup>
+                                <optgroup label="Autres">
+                                    <option value="Deauville">Deauville</option>
+                                    <option value="La Défense">La Défense</option>
+                                    <option value="Versailles">Versailles</option>
+                                    <option value="Giverny">Giverny</option>
+                                    <option value="Fontainebleau">Fontainebleau</option>
+                                </optgroup>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="col_date_passengers" class="col between_col_spaces">
+            <!-- Date Part -->
+            <div class="vertical_field mid_col_spaces">
+                <!-- Date Title-->
+                <h5 class="field_title medium_indent"> Date </h5>
+                <!-- Date Selection -->
+                <div>
+                    <!-- Date Input -->
+                    <label id="dep_pickup_date_ctn">
+                        [date dep_pickup_date id:dep_pickup_date]
+                    </label>
+                </div>
+            </div>
+            <!-- Passengers Part -->
+            <div class="vertical_field mid_col_spaces">
+                <!-- Passengers Title -->
+                <div class="inline_field">
+                    <!-- Passengers Logo -->
+                    <div>
+                        <svg class="small_logo title_logo" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512"
+                            height="512" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512"
+                            xml:space="preserve" class="">
+                            <g>
+                                <path
+                                    d="M111.17 68.29a14.82 14.82 0 1 0-16.66 0 25 25 0 0 0-7.44 4.14 35.13 35.13 0 0 0-13.18-7.23 20.36 20.36 0 1 0-19.77 0 35.13 35.13 0 0 0-13.18 7.23 25 25 0 0 0-7.44-4.14 14.83 14.83 0 1 0-16.66 0A25.21 25.21 0 0 0 0 92a2 2 0 0 0 4 0 21.17 21.17 0 0 1 34.05-16.76 35 35 0 0 0-9.22 23.71 2 2 0 0 0 4 0 31.17 31.17 0 0 1 62.33 0 2 2 0 0 0 4 0 35 35 0 0 0-9.22-23.71A21.17 21.17 0 0 1 124 92a2 2 0 0 0 4 0 25.21 25.21 0 0 0-16.83-23.71zM14.34 56a10.83 10.83 0 1 1 10.83 10.86A10.84 10.84 0 0 1 14.34 56zm33.3-8.62A16.36 16.36 0 1 1 64 63.78a16.38 16.38 0 0 1-16.36-16.36zM92 56a10.83 10.83 0 1 1 10.83 10.83A10.84 10.84 0 0 1 92 56z"
+                                    fill="#ffffff" data-original="#000000" class=""></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <!-- Passengers Title -->
+                    <h5 class="field_title"> Passagers </h5>
+                </div>
+                <!-- Passengers Select -->
+                <div>
+                    <label id="passengers_ctn">
+                        [number passengers min:1 max:8 id:passengers "1"]
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="col_hours_luggages" class="col between_col_spaces">
+            <!-- Hours Part -->
+            <div class="vertical_field mid_col_spaces">
+                <!-- Hours Title-->
+                <h5 class="field_title medium_indent"> Heures* </h5>
+                <!-- Hours Select -->
+                <div>
+                    <label id="dep_departure_hours_ctn">
+                        [select menu id:dep_departure_hours "--:--" "00:00" "00:15" "00:30" "00:45" "01:00" "01:15"
+                        "01:30"
+                        "01:45" "02:00"
+                        "02:15" "02:30" "02:45" "03:00" "03:15" "03:30" "03:45" "04:00" "04:15" "04:30" "04:45" "05:00"
+                        "05:15" "05:30"
+                        "05:45"
+                        "06:00" "06:15" "06:30" "06:45" "07:00" "07:15" "07:30" "07:45" "08:00" "08:15" "08:30" "08:45"
+                        "09:00" "09:15"
+                        "09:30"
+                        "09:45" "10:00" "10:15" "10:30" "10:45" "11:00" "11:15" "11:30" "11:45" "12:00" "12:15" "12:30"
+                        "12:45" "13:00"
+                        "13:15"
+                        "13:30" "13:45" "14:00" "14:15" "14:30" "14:45" "15:00" "15:15" "15:30" "15:45" "16:00" "16:15"
+                        "16:30" "16:45"
+                        "17:00"
+                        "17:15" "17:30" "17:45" "18:00" "18:15" "18:30" "18:45" "19:00" "19:15" "19:30" "19:45" "20:00"
+                        "20:15" "20:30"
+                        "20:45"
+                        "21:00" "21:15" "21:30" "21:45" "22:00" "22:15" "22:30" "22:45" "23:00" "23:15" "23:30" "23:45"]
+                    </label>
+                </div>
+            </div>
+            <!-- Luggages Part -->
+            <div class="vertical_field mid_col_spaces">
+                <!-- Lugagges Title -->
+                <div class="inline_field">
+                    <!-- Luggages Logo -->
+                    <div>
+                        <svg class="title_logo very_small_logo" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512"
+                            height="512" x="0" y="0" viewBox="0 0 512.001 512.001"
+                            style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                            <g>
+                                <path
+                                    d="M457.26 126.02H345.075V69.268c0-8.894-7.21-16.104-16.104-16.104H183.029c-8.894 0-16.104 7.21-16.104 16.104v56.752H54.741C24.557 126.02 0 150.577 0 180.76v223.337c0 30.183 24.557 54.74 54.741 54.74H457.26c30.184 0 54.741-24.557 54.741-54.74V180.76c-.001-30.183-24.558-54.74-54.741-54.74zM199.133 85.373h113.733v40.648H199.133V85.373zM89.054 426.63H54.741c-12.425 0-22.533-10.108-22.533-22.532V180.76c0-12.424 10.108-22.532 22.533-22.532h34.313V426.63zm301.683 0H121.263V158.228h269.475V426.63zm89.055-22.532c0 12.424-10.108 22.532-22.533 22.532h-34.313V158.228h34.313c12.425 0 22.533 10.108 22.533 22.532v223.338z"
+                                    fill="#ffffff" data-original="#000000" class=""></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <!-- Lugagges Title -->
+                    <h5 class="field_title"> Baggages </h5>
+                </div>
+                <!-- Luggages Select-->
+                <div>
+                    <label id="luggages_ctn">
+                        [number luggages min:0 max:7 id:luggages "1"]
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book return Part -->
+        <div class="medium_indent">
+            <label id="book_return_ctn">
+                [checkbox book_return id:book_return "Avec retour"]
+            </label>
+        </div>
+    </div>
+
+    <div id="price" class="vertical_field center">
+        <h5>
+            Votre <strong>course</strong> coûte
+        </h5>
+        <span id="price_value"> </span>
+
+        <!-- Submit btn part -->
+        <div id="submit_btn" class="inline_field">
+            <!-- Submit Title -->
+            <div>
+                Réserver
+            </div>
+            <!-- Submit Logo  -->
+            <div>
+                <svg id="submit_logo" class="small_logo" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                    <g>
+                        <path
+                            d="m370.142 241.858-95.46-95.46c-7.81-7.811-20.474-7.811-28.284 0-7.811 7.811-7.811 20.474 0 28.284L307.716 236H156c-11.046 0-20 8.954-20 20s8.954 20 20 20h151.716l-61.318 61.317c-7.811 7.81-7.811 20.475 0 28.285 7.813 7.811 20.473 7.809 28.284 0l95.46-95.46c7.732-7.732 7.85-20.434 0-28.284z"
+                            fill="#ffffff" data-original="#000000" class=""></path>
+                        <path
+                            d="M256 16C123.362 16 16 123.344 16 256c0 132.638 107.343 240 240 240 132.638 0 240-107.343 240-240 0-132.638-107.344-240-240-240zm0 440c-110.28 0-200-89.72-200-200S145.72 56 256 56s200 89.72 200 200-89.72 200-200 200z"
+                            fill="#ffffff" data-original="#000000" class=""></path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .border{border: solid red 2px;}
+    .auto_heigh{height: 100%;}
+    /* General */
+    .center {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .mid_col_spaces {
+        height: 50%;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .inline_field {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .vertical_field {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* General Forms */
+    select {
+        font-family: quicksand;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    input {
+        font-family: quicksand;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    .medium_logo {
+        width: 22px;
+        height: 30px;
+    }
+
+    .small_logo {
+        width: 29px;
+        height: 23px;
+    }
+
+    .very_small_logo {
+        width: 20px;
+        height: 14px;
+    }
+
+    .field_title {
+        color: white;
+        font-family: quicksand;
+        font-weight: 300;
+        font-size: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        transform: translateY(25px);
+    }
+
+    .medium_indent {
+        padding-left: 20px;
+    }
+
+    .high_indent {
+        padding-left: 50px;
+    }
+
+    .title_logo {
+        transform: translateY(29px);
+        margin-right: 5px;
+    }
+
+    .between_col_spaces {
+        margin-left: 20px;
+    }
+
+    /* Details Part */
+    #forms {
+        width: 1000px;
+        height: 250px;
+        background: #201C1C;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 5px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+    }
+
+
+    /* Pickup Part */
+    #dep_pickup_location {
+        width: 251px;
+        height: 40px;
+        margin-left: 10px;
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Drop Part */
+    #dep_drop_location {
+        width: 251px;
+        height: 40px;
+        margin-left: 10px;
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Date Part */
+    #dep_pickup_date {
+        width: 187px;
+        height: 40px;
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Passengers */
+    #passengers {
+        width: 187px;
+        height: 40px;
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Hours */
+    #dep_departure_hours {
+        width: 187px;
+        height: 40px;
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Luggages */
+    #luggages {
+        width: 187px;
+        height: 40px;
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Book Return */
+    #book_return{
+        color: white;
+        font-family: quicksand;
+        font-weight: 300;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        transform: translateY(-5px);
+    }
+
+    /* Price */
+    #price{
+        width: 296px;
+        height: 250px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        margin-left: 40px;
+
+        font-family: quicksand;
+        font-weight: 300;
+    }
+
+    #price > h5{
+        font-size: 100%;
+    }
+
+    #price_value{
+        font-size: 400%;
+        font-family: work sans;
+        font-weight: bold;
+    }
+
+    #submit_btn{
+        width: 150px;
+        height: 40px;
+        color: white;
+        background: #201C1C;
+        border-radius: 50px;
+        font-family: work sans;
+        transition: all 0.8s;
+        transform: translateY(-10px);
+    }
+    #submit_btn:hover{
+        transform: translateY(10px);
+    }
+
+    #submit_btn > div{
+        transform: translate(35px, 5px);
+    }
+    #submit_logo{
+        width: 25px;
+        height: 16px;
+        transform: translate(5px, 4px);
+    }
+
+</style>
+
+<!-- CONSTANTES init -->
+<script type="text/javascript">
+    const BASE_URL = "https://skyshuttlepremium.com/book-page?";
+    
+    const FIELDS_KEYS = ["pickup_location", "drop_location", "passengers", "luggages", "departure_hours", "pickup_date", "book_return"];
+    
+    const SUBMIT_BTN_ID = "submit_btn";
+    const PRICE_ID = "price_value";
+
+    const DEFAULT_PRICE = "-"
+</script>
+
+<!-- Onload page init -->
+<script type="text/javascript">
+    window.onload = (event) => {
+        init_listeners();
+        set_default_price();
+    };
+</script>
+
+<!-- Listeners init -->
+<script type="text/javascript">
+    function init_listeners() {
+        // Pickup location 
+        document.getElementById(GLOBAL.pickup_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_location-one_way", event.target); update_price(); });
+        // Drop Location
+        document.getElementById(GLOBAL.drop_location.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("drop_location-one_way", event.target); update_price(); });
+        // Hours
+        document.getElementById(GLOBAL.departure_hours.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("departure_hours-one_way", event.target); update_price(); });
+        // Passengers
+        document.getElementById(GLOBAL.passengers.form.id).addEventListener('change', (event) => { from_html_update_global("passengers", event.target); update_price(); });
+        // Luggages
+        document.getElementById(GLOBAL.luggages.form.id).addEventListener('change', (event) => { from_html_update_global("luggages", event.target); });
+        // Return book
+        document.getElementById(GLOBAL.book_return.form.id).addEventListener('change', (event) => { from_html_update_global("book_return", event.target); update_price(); });
+        // Pickup Date
+        document.getElementById(GLOBAL.pickup_date.one_way.form.id).addEventListener('change', (event) => { from_html_update_global("pickup_date-one_way", event.target); });
+        // Submit btn
+        document.getElementById(SUBMIT_BTN_ID).addEventListener('click', (event) => { send_form(); });
+    }
+</script>
+
+<!-- General functions -->
+
+<!-- Utilitaries functions -->
+
+<script type="text/javascript">
+    // GLOBAL utilitaries
+
+    // Input "field_name-mode" (return or one_way) | "field_name"
+    // input type: "html" or "value"
+    function update_global(cmd, input_type, input) {
+        // Decode cmd
+        let field_name = cmd;
+        let mode;
+        const field_and_mode = cmd.split('-');
+
+        if (field_and_mode.length > 1) {
+            field_name = field_and_mode[0];
+            mode = field_and_mode[1];
+        }
+        const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+        switch (GLOBAL[field_name].type) {
+            case "select":
+                if (one_way_return_mode) {
+                    if (mode === "one_way") {
+                        if (input_type === "html") {
+                            GLOBAL[field_name].one_way.index = input.selectedIndex;
+                            GLOBAL[field_name].one_way.values = input[input.selectedIndex].text;
+                        }
+                        else if (input_type === "value") {
+                            // For select value update index and text 
+                            GLOBAL[field_name].one_way.index = input;
+                            GLOBAL[field_name].one_way.values = input;
+                        }
+                    }
+                    else if (mode === "return") {
+                        if (input_type === "html") {
+                            GLOBAL[field_name].return.index = input.selectedIndex;
+                            GLOBAL[field_name].return.values = input[input.selectedIndex].text;
+                        }
+                        else if (input_type === "value") {
+                            // For select value update index and text 
+                            GLOBAL[field_name].return.index = input;
+                            GLOBAL[field_name].return.values = input;
+                        }
+                    }
+                }
+                else {
+                    if (input_type === "html") {
+                        GLOBAL[field_name].index = input.selectedIndex;
+                        GLOBAL[field_name].values = input[input.selectedIndex].text;
+                    }
+                    else if (input_type === "value") {
+                        // For select value update index and text 
+                        GLOBAL[field_name].index = input;
+                        GLOBAL[field_name].values = input;
+                    }
+                }
+                break;
+
+            case "check":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.checked;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.checked;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.checked;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+
+            case "date":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+
+            case "textarea":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+            case "number":
+                if (one_way_return_mode) {
+                    if (mode == "one_way") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].one_way.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].one_way.values = input;
+                    }
+                    else if (mode == "return") {
+                        if (input_type === "html")
+                            GLOBAL[field_name].return.values = input.value;
+                        else if (input_type === "value")
+                            GLOBAL[field_name].return.values = input;
+                    }
+                }
+                else {
+                    if (input_type === "html")
+                        GLOBAL[field_name].values = input.value;
+                    else if (input_type === "value")
+                        GLOBAL[field_name].values = input;
+                }
+                break;
+        }
+    }
+
+    function from_html_update_global(cmd, html) {
+        update_global(cmd, "html", html);
+    }
+
+    function from_value_update_global(cmd, value) {
+        update_global(cmd, "value", value);
+    }
+
+    // Price utilitaries
+
+    // mode -> one_way or return
+    function calculate_price(mode) {
+            const default_price = -1;
+            let price = 0;
+            if (mode == "one_way") {
+                const pickup_location = GLOBAL.pickup_location[mode].values;
+                const drop_location = GLOBAL.drop_location[mode].values;
+                const passengers = GLOBAL.passengers.values;
+                const hour = GLOBAL.departure_hours[mode].values;
+
+                if (have_value(pickup_location) && have_value(drop_location) && have_value(passengers))
+                    price += get_price(["transfers", pickup_location, drop_location, passengers, "price"]);
+
+                if (price === 0)
+                    return default_price;
+
+                if (have_value(hour) && hour.split(":")[0] != "--") {
+                    const hour_value = Number(hour.split(":")[0]);
+                    price += get_price(["extra_prices", "night", hour_value]);
+                }
+            }
+            else if (mode == "return") {
+                const pickup_location = GLOBAL.drop_location["one_way"].values; // reverse locations
+                const drop_location = GLOBAL.pickup_location["one_way"].values;
+                const passengers = GLOBAL.passengers.values;
+                // Don't calculate extra hours for the return
+
+                if (have_value(pickup_location) && have_value(drop_location) && have_value(passengers))
+                    price += get_price(["transfers", pickup_location, drop_location, passengers, "price"]);
+
+                if (price === 0)
+                    return default_price;
+            }
+            return price;
+        }
+
+    function get_price(keys) {
+        let object = PRICES;
+        for (i in keys) {
+            const key = keys[i];
+            object = object[key] ?? "*";
+            if (object == "*")
+                return 0;
+        }
+        return object;
+    }
+
+    // Other
+    function have_value(x) {
+        return (x != null && x != undefined && x != "null" && x != "undefined" && x != "" && x != " ");
+    }
+
+</script>
+
+<!-- Form sender -->
+<script type="text/javascript">
+    function send_form() {
+        let url = BASE_URL;
+        for (i in FIELDS_KEYS) {
+            const field_name = FIELDS_KEYS[i];
+            const one_way_return_mode = (GLOBAL[field_name].one_way !== undefined && GLOBAL[field_name].one_way !== null);
+
+            let val;
+            if (GLOBAL[field_name].type == "select") {
+                if (one_way_return_mode) val = GLOBAL[field_name].one_way.index;
+                else val = GLOBAL[field_name].index;
+            }
+            else {
+                if (one_way_return_mode) val = GLOBAL[field_name].one_way.values;
+                else val = GLOBAL[field_name].values;
+            }
+
+            if (val === null || val === undefined) val = 0;
+
+            url += "&" + field_name + "=" + val;
+        }
+        window.location.href = url;
+    }
+</script>
+
+
+<!-- Update Price -->
+<script type="text/javascript">
+    function update_price() {
+        let html_price = document.getElementById(PRICE_ID);
+        const return_book = GLOBAL.book_return.values;
+        const one_way_price = calculate_price("one_way");
+        const return_price = calculate_price("return");
+
+        if (!return_book && one_way_price !== -1)
+            html_price.innerHTML = (one_way_price + "€");
+
+        else if (return_book && one_way_price !== -1 && return_price !== -1)
+            html_price.innerHTML = ((one_way_price + return_price) + "€");
+
+        else
+            set_default_price();
+    }
+    function set_default_price() {
+        document.getElementById(PRICE_ID).innerHTML = (DEFAULT_PRICE + "€");
+    }
+</script>
+
+
+
+
+
+

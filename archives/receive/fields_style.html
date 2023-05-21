@@ -1,0 +1,919 @@
+<div>
+    <h1>Réservation de votre course</h1>
+
+    <div class="full_width horizontal_direction horizontal_align_left nowrap">
+        <div id="fields">
+            <!-- Transfer ONE WAY -->
+            <div id="one_way_part">
+                <h2>Informations générales de la Course</h2>
+
+                <div class="center wrap">
+                    <div class="full_width horizontal_align_left horizontal_direction nowrap">
+                        <div id="col_pickup_passagers" class="vertical_direction horizontal_align_left nowrap">
+                            <!-- Pickup Part -->
+                            <div class="vertical_direction nowrap">
+                                <!-- Pickup Title-->
+                                <h5 class="full_width horizontal_align_left"> Lieu de prise en charge </h5>
+                                <!-- Pickup Selection-->
+                                <div class="full_width left_align vertical_align_center nowrap">
+                                    <!-- Pickup Logo -->
+                                    <div>
+                                        <svg class="medium_logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m16 1a11 11 0 0 0 -11 11c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0c.42-.53 10.22-12.82 10.22-18.63a11 11 0 0 0 -11-11zm0 14a4 4 0 1 1 4-4 4 4 0 0 1 -4 4z" />
+                                        </svg>
+                                    </div>
+                                    <!-- Pickup Input -->
+                                    <div>
+                                        <label id="dep_pickup_location_ctn">
+                                            [select* dep_pickup_location id:dep_pickup_location default:0 "Lieu de prise en charge"
+                                            "CDG"
+                                            "ORLY"
+                                            "BEAUVAIS" "DISNEY" "PARIS"]
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Passengers Part -->
+                            <div class="vertical_direction nowrap border">
+                                <!-- Passengers Title -->
+                                <div class="full_width horizontal_direction horizontal_align_left vertical_align_center nowrap">
+                                    <!-- Passengers Logo -->
+                                    <div>
+                                        <svg class="medium_logo" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m111.17 68.29a14.82 14.82 0 1 0 -16.66 0 25 25 0 0 0 -7.44 4.14 35.13 35.13 0 0 0 -13.18-7.23 20.36 20.36 0 1 0 -19.77 0 35.13 35.13 0 0 0 -13.18 7.23 25 25 0 0 0 -7.44-4.14 14.83 14.83 0 1 0 -16.66 0 25.21 25.21 0 0 0 -16.84 23.71 2 2 0 0 0 4 0 21.17 21.17 0 0 1 34.05-16.76 35 35 0 0 0 -9.22 23.71 2 2 0 0 0 4 0 31.17 31.17 0 0 1 62.33 0 2 2 0 0 0 4 0 35 35 0 0 0 -9.22-23.71 21.17 21.17 0 0 1 34.06 16.76 2 2 0 0 0 4 0 25.21 25.21 0 0 0 -16.83-23.71zm-96.83-12.29a10.83 10.83 0 1 1 10.83 10.86 10.84 10.84 0 0 1 -10.83-10.86zm33.3-8.62a16.36 16.36 0 1 1 16.36 16.4 16.38 16.38 0 0 1 -16.36-16.36zm44.36 8.62a10.83 10.83 0 1 1 10.83 10.83 10.84 10.84 0 0 1 -10.83-10.83z" />
+                                        </svg>
+                                    </div>
+                                    <!-- Passengers Title -->
+                                    <h5 class="horizontal_align_left"> Passagers </h5>
+                                </div>
+                                <!-- Passengers Select -->
+                                <div>
+                                    <label id="passengers_ctn">
+                                        [number passengers min:0 max:7 id:passengers "1"]
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="col_drop_luggages">
+                            <!-- Drop Part -->
+                            <div class="vertical_direction nowrap">
+                                <!-- Drop Title -->
+                                <h5 class="full_width horizontal_align_left"> Lieu de destination </h5>
+                                <!-- Drop Selection -->
+                                <div class="full_width left_align vertical_align_center nowrap">
+                                    <!-- Drop Logo -->
+                                    <div>
+                                        <svg class="medium_logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m16 1a11 11 0 0 0 -11 11c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0c.42-.53 10.22-12.82 10.22-18.63a11 11 0 0 0 -11-11zm0 27.38c-3.09-4-9-12.5-9-16.38a9 9 0 0 1 18 0c0 3.88-5.91 12.36-9 16.38z" />
+                                            <path d="m16 5a6 6 0 1 0 6 6 6 6 0 0 0 -6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1 -4 4z" />
+                                        </svg>
+                                    </div>
+                                    <!-- Drop Input -->
+                                    <div>
+                                        <label id="dep_drop_location_ctn">
+                                            [select* dep_drop_location id:dep_drop_location default:0 "Où allez-vous ?" "CDG" "ORLY"
+                                            "BEAUVAIS"
+                                            "DISNEY" "PARIS"]
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Luggages Part -->
+                            <div class="vertical_direction nowrap border">
+                                <!-- Lugagges Title -->
+                                <div class="full_width horizontal_direction horizontal_align_left vertical_align_center nowrap">
+                                    <!-- Luggages Logo -->
+                                    <div>
+                                        <svg class="very_small_logo title_logo" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0"
+                                            viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                                            class="">
+                                            <g>
+                                                <path
+                                                    d="M457.26 126.02H345.075V69.268c0-8.894-7.21-16.104-16.104-16.104H183.029c-8.894 0-16.104 7.21-16.104 16.104v56.752H54.741C24.557 126.02 0 150.577 0 180.76v223.337c0 30.183 24.557 54.74 54.741 54.74H457.26c30.184 0 54.741-24.557 54.741-54.74V180.76c-.001-30.183-24.558-54.74-54.741-54.74zM199.133 85.373h113.733v40.648H199.133V85.373zM89.054 426.63H54.741c-12.425 0-22.533-10.108-22.533-22.532V180.76c0-12.424 10.108-22.532 22.533-22.532h34.313V426.63zm301.683 0H121.263V158.228h269.475V426.63zm89.055-22.532c0 12.424-10.108 22.532-22.533 22.532h-34.313V158.228h34.313c12.425 0 22.533 10.108 22.533 22.532v223.338z"
+                                                    fill="#000000" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <!-- Lugagges Title -->
+                                    <h5 class="horizontal_align_left"> Baggages </h5>
+                                </div>
+                                <!-- Luggages Select-->
+                                <div>
+                                    <label id="luggages_ctn">
+                                        [number luggages min:0 max:7 id:luggages "1"]
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="full_width border">
+                        <label id="book_return_ctn"> Retour
+                            [checkbox book_return id:book_return "Avec retour"]
+                        </label>
+                    </div>
+                </div>
+                
+                <h2>Détails de la Course</h2>
+                <div>
+                    <!-- Constantes: Date and Hours -->
+                    <div class="full_width horizontal_direction horizontal_align_left vertical_align_center nowrap">
+                        <!-- Date Part -->
+                        <div class="vertical_direction horizontal_align_left nowrap">
+                            <!-- Date Title-->
+                            <h5 class="full_width horizontal_align_left"> Date </h5>
+                            <!-- Date Selection -->
+                            <div>
+                                <!-- Date Input -->
+                                <label id="dep_pickup_date_ctn">
+                                    [date* dep_pickup_date id:dep_pickup_date]
+                                </label>
+                            </div>
+                        </div>
+                
+                        <!-- Hours Part -->
+                        <div class="vertical_direction horizontal_align_left nowrap">
+                            <!-- Hours Title-->
+                            <h5 class="full_width horizontal_align_left"> Heures </h5>
+                            <!-- Hours Select -->
+                            <div>
+                                <label id="dep_departure_hours_ctn">
+                                    [select dep_departure_hours id:dep_departure_hours "--:--" "00:00" "00:15" "00:30" "00:45" "01:00" "01:15"
+                                    "01:30"
+                                    "01:45" "02:00"
+                                    "02:15" "02:30" "02:45" "03:00" "03:15" "03:30" "03:45" "04:00" "04:15" "04:30" "04:45" "05:00"
+                                    "05:15" "05:30"
+                                    "05:45"
+                                    "06:00" "06:15" "06:30" "06:45" "07:00" "07:15" "07:30" "07:45" "08:00" "08:15" "08:30" "08:45"
+                                    "09:00" "09:15"
+                                    "09:30"
+                                    "09:45" "10:00" "10:15" "10:30" "10:45" "11:00" "11:15" "11:30" "11:45" "12:00" "12:15" "12:30"
+                                    "12:45" "13:00"
+                                    "13:15"
+                                    "13:30" "13:45" "14:00" "14:15" "14:30" "14:45" "15:00" "15:15" "15:30" "15:45" "16:00" "16:15"
+                                    "16:30" "16:45"
+                                    "17:00"
+                                    "17:15" "17:30" "17:45" "18:00" "18:15" "18:30" "18:45" "19:00" "19:15" "19:30" "19:45" "20:00"
+                                    "20:15" "20:30"
+                                    "20:45"
+                                    "21:00" "21:15" "21:30" "21:45" "22:00" "22:15" "22:30" "22:45" "23:00" "23:15" "23:30" "23:45"]
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Classic transfer info: pickup_address and drop_address -->
+                <div id="classic_transfer_one_way" class="vertical_direction nowrap">
+                    <div>
+                        <label id="dep_pickup_address_ctn" class="vertical_direction nowrap" style="display: none;"> 
+                            <svg class="medium_logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m16 1a11 11 0 0 0 -11 11c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0c.42-.53 10.22-12.82 10.22-18.63a11 11 0 0 0 -11-11zm0 14a4 4 0 1 1 4-4 4 4 0 0 1 -4 4z" />
+                            </svg>
+                            One Way Pickup Address
+                            [textarea* dep_pickup_address id:dep_pickup_address placeholder "saisissez l'adresse..."]
+                        </label>
+                    </div>
+                    <div>
+                        <label id="dep_drop_address_ctn" style="display: none;"> One Way Destination Address
+                            [textarea* dep_drop_address id:dep_drop_address placeholder "saisissez l'adresse..."]
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Flight transfer info: n° and country -->
+                <div id="flight_transfer_one_way" class="horizontal_direction nowrap">
+                    <div>
+                        <label id="dep_pickup_flight_no_ctn" style="display: none;"> 
+                            <svg class="medium_logo" xml:space="preserve" viewBox="0 0 682.66669 682.66669" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs13">
+                                    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath23">
+                                        <path d="M 0,512 H 512 V 0 H 0 Z" id="path21" />
+                                    </clipPath>
+                                </defs>
+                                <g id="g15" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+                                    <g id="g17">
+                                        <g id="g19" clip-path="url(#clipPath23)">
+                                            <g id="g25" transform="translate(464.8633,497)">
+                                                <path
+                                                    d="m 0,0 c -20.572,0 -40.302,-8.17 -54.85,-22.718 -73.273,-73.272 -298.613,-298.615 -298.613,-298.615 h -64.283 c -17.737,0 -32.117,-14.38 -32.117,-32.118 v -0.016 l 80.333,-48.2 48.2,-80.333 c 8.522,0 16.696,3.382 22.722,9.415 6.026,6.025 9.411,14.195 9.411,22.718 v 64.267 c 0,0 225.341,225.343 298.614,298.615 14.547,14.548 22.72,34.278 22.72,54.852 v 0.016 C 32.137,-14.379 17.757,0 0.02,0 H 0.003 Z"
+                                                    style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    id="path27" />
+                                            </g>
+                                            <g id="g29" transform="translate(320.2666,384.5332)">
+                                                <path
+                                                    d="m 0,0 c 0,0 -136.776,32.182 -216.749,51.004 -33.904,7.976 -69.195,-5.953 -88.514,-34.929 -0.003,-0.008 -0.004,-0.008 -0.004,-0.008 L -96.4,-96.4"
+                                                    style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    id="path31" />
+                                            </g>
+                                            <g id="g33" transform="translate(384.5332,320.2666)">
+                                                <path
+                                                    d="m 0,0 c 0,0 32.183,-136.775 51,-216.748 7.978,-33.908 -5.949,-69.198 -34.928,-88.519 H 16.067 L -96.4,-96.4"
+                                                    style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    id="path35" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            One Way PickUp Flight No
+                            [textarea* dep_pickup_flight_no id:dep_pickup_flight_no placeholder "saisissez votre numéro de vol..."]
+                        </label>
+                    </div>
+                    <div>
+                        <label id="dep_drop_flight_no_ctn" style="display: none;"> 
+                            <svg class="medium_logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m16 1a11 11 0 0 0 -11 11c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0c.42-.53 10.22-12.82 10.22-18.63a11 11 0 0 0 -11-11zm0 27.38c-3.09-4-9-12.5-9-16.38a9 9 0 0 1 18 0c0 3.88-5.91 12.36-9 16.38z" />
+                                <path d="m16 5a6 6 0 1 0 6 6 6 6 0 0 0 -6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1 -4 4z" />
+                            </svg>
+                            On Way Drop Flight No
+                            [textarea* dep_drop_flight_no id:dep_drop_flight_no placeholder "saisissez votre numéro de vol..."]
+                        </label>
+                    </div>
+                </div>
+                <!-- Disney transfer info: hotel -->
+                <div id="disney_transfer_one_way" class="full_width horizontal_direction nowrap">
+                    <label id="dep_pickup_disney_location_ctn" style="display: none;"> 
+                        <svg class="medium_logo" xml:space="preserve"
+                            viewBox="0 0 682.66669 682.66669" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                            <defs id="defs1510">
+                                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1520">
+                                    <path d="M 0,512 H 512 V 0 H 0 Z" id="path1518" />
+                                </clipPath>
+                                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1548">
+                                    <path d="M 0,512 H 512 V 0 H 0 Z" id="path1546" />
+                                </clipPath>
+                                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1578">
+                                    <path d="M 0,512 H 512 V 0 H 0 Z" id="path1576" />
+                                </clipPath>
+                            </defs>
+                            <g id="g1512" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+                                <g id="g1514">
+                                    <g id="g1516" clip-path="url(#clipPath1520)">
+                                        <g id="g1522" transform="translate(15,15)">
+                                            <path d="M 0,0 H 482"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1524" />
+                                        </g>
+                                        <path d="m 46,227 h 90 V 15 H 46 Z"
+                                            style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                            id="path1526" />
+                                        <path d="m 376,227 h 90 V 15 h -90 z"
+                                            style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                            id="path1528" />
+                                        <g id="g1530" transform="translate(46,227)">
+                                            <path d="M 0,0 45,90"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1532" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="g1534" transform="translate(91,317)">
+                                    <path d="M 0,0 45,-90"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1536" />
+                                </g>
+                                <g id="g1538" transform="translate(376,227)">
+                                    <path d="M 0,0 45,90"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1540" />
+                                </g>
+                                <g id="g1542">
+                                    <g id="g1544" clip-path="url(#clipPath1548)">
+                                        <g id="g1550" transform="translate(421,317)">
+                                            <path d="M 0,0 45,-90"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1552" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="g1554" transform="translate(211,287)">
+                                    <path d="M 0,0 45,90"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1556" />
+                                </g>
+                                <g id="g1558" transform="translate(256,377)">
+                                    <path d="M 0,0 45,-90"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1560" />
+                                </g>
+                                <path d="m 211,287 h 90 v -60 h -90 z"
+                                    style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                    id="path1562" />
+                                <g id="g1564" transform="translate(136,227)">
+                                    <path d="M 0,0 H 240"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1566" />
+                                </g>
+                                <g id="g1568" transform="translate(136,167)">
+                                    <path d="M 0,0 H 240"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1570" />
+                                </g>
+                                <g id="g1572">
+                                    <g id="g1574" clip-path="url(#clipPath1578)">
+                                        <g id="g1580" transform="translate(256,106)">
+                                            <path d="m 0,0 c 16.568,0 30,-13.432 30,-30 v -61 h -60 v 61 c 0,16.568 13.432,30 30,30 z"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1582" />
+                                        </g>
+                                        <g id="g1584" transform="translate(256,497)">
+                                            <path d="M 0,0 V -120"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1586" />
+                                        </g>
+                                        <g id="g1588" transform="translate(256,497)">
+                                            <path d="M 0,0 C 23.432,0 36.568,-30 60,-30 V -90 C 36.568,-90 23.432,-60 0,-60"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1590" />
+                                        </g>
+                                        <g id="g1592" transform="translate(421,437)">
+                                            <path d="M 0,0 V -120"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1594" />
+                                        </g>
+                                        <g id="g1596" transform="translate(421,437)">
+                                            <path d="M 0,0 C 23.432,0 36.568,-30 60,-30 V -90 C 36.568,-90 23.432,-60 0,-60"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1598" />
+                                        </g>
+                                        <g id="g1600" transform="translate(91,437)">
+                                            <path d="M 0,0 V -120"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1602" />
+                                        </g>
+                                        <g id="g1604" transform="translate(91,437)">
+                                            <path d="M 0,0 C 23.432,0 36.568,-30 60,-30 V -90 C 36.568,-90 23.432,-60 0,-60"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1606" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        One Way Disney PickUp Location
+                        [select* dep_pickup_disney_location id:dep_pickup_disney_location default:0 "Disney mode select" "a" "b"]
+                    </label>
+                </div>
+            </div>
+
+            <!-- Transfer RETURN -->
+            <div id="return_part">
+                <h2>Informations générales de la Course (RETOUR)</h2>
+            
+                <div class="full_width horizontal_align_left horizontal_direction nowrap">
+                    
+                        <div id="col_pickup_passagers" class="vertical_direction horizontal_align_left nowrap">
+                            <!-- Pickup Part -->
+                            <div class="vertical_direction nowrap">
+                                <!-- Pickup Title-->
+                                <h5 class="full_width horizontal_align_left"> Lieu de prise en charge </h5>
+                                <!-- Pickup Selection-->
+                                <div class="full_width left_align vertical_align_center nowrap">
+                                    <!-- Pickup Logo -->
+                                    <div>
+                                        <svg class="medium_logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m16 1a11 11 0 0 0 -11 11c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0c.42-.53 10.22-12.82 10.22-18.63a11 11 0 0 0 -11-11zm0 14a4 4 0 1 1 4-4 4 4 0 0 1 -4 4z" />
+                                        </svg>
+                                    </div>
+                                    <!-- Pickup Input -->
+                                    <div>
+                                        <label id="ret_pickup_location_ctn">
+                                            [select* ret_pickup_location id:ret_pickup_location default:0 "Lieu de prise en charge"
+                                            "CDG"
+                                            "ORLY"
+                                            "BEAUVAIS" "DISNEY" "PARIS"]
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="col_drop_luggages">
+                            <!-- Drop Part -->
+                            <div class="vertical_direction nowrap">
+                                <!-- Drop Title -->
+                                <h5 class="full_width horizontal_align_left"> Lieu de destination </h5>
+                                <!-- Drop Selection -->
+                                <div class="full_width left_align vertical_align_center nowrap">
+                                    <!-- Drop Logo -->
+                                    <div>
+                                        <svg class="medium_logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m16 1a11 11 0 0 0 -11 11c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0c.42-.53 10.22-12.82 10.22-18.63a11 11 0 0 0 -11-11zm0 27.38c-3.09-4-9-12.5-9-16.38a9 9 0 0 1 18 0c0 3.88-5.91 12.36-9 16.38z" />
+                                            <path d="m16 5a6 6 0 1 0 6 6 6 6 0 0 0 -6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1 -4 4z" />
+                                        </svg>
+                                    </div>
+                                    <!-- Drop Input -->
+                                    <div>
+                                        <label id="ret_drop_location_ctn">
+                                            [select* ret_drop_location id:ret_drop_location default:0 "Où allez-vous ?" "CDG" "ORLY"
+                                            "BEAUVAIS"
+                                            "DISNEY" "PARIS"]
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            
+                <h2>Détails de la Course (RETOUR)</h2>
+                <div>
+                    <!-- Constantes: Date and Hours -->
+                    <div class="full_width horizontal_direction horizontal_align_left vertical_align_center nowrap">
+                        <!-- Date Part -->
+                        <div class="vertical_direction horizontal_align_left nowrap">
+                            <!-- Date Title-->
+                            <h5 class="full_width horizontal_align_left"> Date </h5>
+                            <!-- Date Selection -->
+                            <div>
+                                <!-- Date Input -->
+                                <label id="dep_pickup_date_ctn">
+                                    [date* dep_pickup_date id:dep_pickup_date]
+                                </label>
+                            </div>
+                        </div>
+                
+                        <!-- Hours Part -->
+                        <div class="vertical_direction horizontal_align_left nowrap">
+                            <!-- Hours Title-->
+                            <h5 class="full_width horizontal_align_left"> Heures </h5>
+                            <!-- Hours Select -->
+                            <div>
+                                <label id="dep_departure_hours_ctn">
+                                    [select dep_departure_hours id:dep_departure_hours "--:--" "00:00" "00:15" "00:30" "00:45" "01:00"
+                                    "01:15"
+                                    "01:30"
+                                    "01:45" "02:00"
+                                    "02:15" "02:30" "02:45" "03:00" "03:15" "03:30" "03:45" "04:00" "04:15" "04:30" "04:45" "05:00"
+                                    "05:15" "05:30"
+                                    "05:45"
+                                    "06:00" "06:15" "06:30" "06:45" "07:00" "07:15" "07:30" "07:45" "08:00" "08:15" "08:30" "08:45"
+                                    "09:00" "09:15"
+                                    "09:30"
+                                    "09:45" "10:00" "10:15" "10:30" "10:45" "11:00" "11:15" "11:30" "11:45" "12:00" "12:15" "12:30"
+                                    "12:45" "13:00"
+                                    "13:15"
+                                    "13:30" "13:45" "14:00" "14:15" "14:30" "14:45" "15:00" "15:15" "15:30" "15:45" "16:00" "16:15"
+                                    "16:30" "16:45"
+                                    "17:00"
+                                    "17:15" "17:30" "17:45" "18:00" "18:15" "18:30" "18:45" "19:00" "19:15" "19:30" "19:45" "20:00"
+                                    "20:15" "20:30"
+                                    "20:45"
+                                    "21:00" "21:15" "21:30" "21:45" "22:00" "22:15" "22:30" "22:45" "23:00" "23:15" "23:30" "23:45"]
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Classic transfer info: pickup_address and drop_address -->
+                <div id="classic_transfer_return" class="vertical_direction nowrap">
+                    <div>
+                        <label id="ret_pickup_address_ctn" class="vertical_direction nowrap" style="display: none;">
+                            <svg class="medium_logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m16 1a11 11 0 0 0 -11 11c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0c.42-.53 10.22-12.82 10.22-18.63a11 11 0 0 0 -11-11zm0 14a4 4 0 1 1 4-4 4 4 0 0 1 -4 4z" />
+                            </svg>
+                            Return Pickup Address
+                            [textarea* ret_pickup_address id:ret_pickup_address placeholder "saisissez l'adresse..."]
+                        </label>
+                    </div>
+                    <div>
+                        <label id="ret_drop_disney_location_ctn" style="display: none;"> Return Disney PickUp Location
+                            [select* ret_drop_disney_location id:ret_drop_disney_location default:0 "Disney mode select" "a" "b"]
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Flight transfer info: n° and country -->
+                <div id="flight_transfer_return" class="horizontal_direction nowrap">
+                    <div>
+                        <label id="ret_pickup_flight_no_ctn" style="display: none;">
+                            <svg class="medium_logo" xml:space="preserve" viewBox="0 0 682.66669 682.66669"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs13">
+                                    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath23">
+                                        <path d="M 0,512 H 512 V 0 H 0 Z" id="path21" />
+                                    </clipPath>
+                                </defs>
+                                <g id="g15" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+                                    <g id="g17">
+                                        <g id="g19" clip-path="url(#clipPath23)">
+                                            <g id="g25" transform="translate(464.8633,497)">
+                                                <path
+                                                    d="m 0,0 c -20.572,0 -40.302,-8.17 -54.85,-22.718 -73.273,-73.272 -298.613,-298.615 -298.613,-298.615 h -64.283 c -17.737,0 -32.117,-14.38 -32.117,-32.118 v -0.016 l 80.333,-48.2 48.2,-80.333 c 8.522,0 16.696,3.382 22.722,9.415 6.026,6.025 9.411,14.195 9.411,22.718 v 64.267 c 0,0 225.341,225.343 298.614,298.615 14.547,14.548 22.72,34.278 22.72,54.852 v 0.016 C 32.137,-14.379 17.757,0 0.02,0 H 0.003 Z"
+                                                    style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    id="path27" />
+                                            </g>
+                                            <g id="g29" transform="translate(320.2666,384.5332)">
+                                                <path
+                                                    d="m 0,0 c 0,0 -136.776,32.182 -216.749,51.004 -33.904,7.976 -69.195,-5.953 -88.514,-34.929 -0.003,-0.008 -0.004,-0.008 -0.004,-0.008 L -96.4,-96.4"
+                                                    style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    id="path31" />
+                                            </g>
+                                            <g id="g33" transform="translate(384.5332,320.2666)">
+                                                <path
+                                                    d="m 0,0 c 0,0 32.183,-136.775 51,-216.748 7.978,-33.908 -5.949,-69.198 -34.928,-88.519 H 16.067 L -96.4,-96.4"
+                                                    style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    id="path35" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            Return PickUp Flight No
+                            [textarea* ret_pickup_flight_no id:ret_pickup_flight_no placeholder "saisissez votre numéro de vol..."]
+                        </label>
+                    </div>
+                    <div>
+                        <label id="ret_drop_flight_no_ctn" style="display: none;">
+                            <svg class="medium_logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m16 1a11 11 0 0 0 -11 11c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0c.42-.53 10.22-12.82 10.22-18.63a11 11 0 0 0 -11-11zm0 27.38c-3.09-4-9-12.5-9-16.38a9 9 0 0 1 18 0c0 3.88-5.91 12.36-9 16.38z" />
+                                <path d="m16 5a6 6 0 1 0 6 6 6 6 0 0 0 -6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1 -4 4z" />
+                            </svg>
+                            Return Drop Flight No
+                            [textarea* ret_drop_flight_no id:ret_drop_flight_no placeholder "saisissez votre numéro de vol..."]
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Disney transfer info: hotel -->
+                <div id="disney_transfer_return" class="full_width horizontal_direction nowrap">
+                    <label id="ret_pickup_disney_location_ctn" style="display: none;">
+                        <svg class="medium_logo" xml:space="preserve" viewBox="0 0 682.66669 682.66669"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                            <defs id="defs1510">
+                                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1520">
+                                    <path d="M 0,512 H 512 V 0 H 0 Z" id="path1518" />
+                                </clipPath>
+                                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1548">
+                                    <path d="M 0,512 H 512 V 0 H 0 Z" id="path1546" />
+                                </clipPath>
+                                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1578">
+                                    <path d="M 0,512 H 512 V 0 H 0 Z" id="path1576" />
+                                </clipPath>
+                            </defs>
+                            <g id="g1512" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+                                <g id="g1514">
+                                    <g id="g1516" clip-path="url(#clipPath1520)">
+                                        <g id="g1522" transform="translate(15,15)">
+                                            <path d="M 0,0 H 482"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1524" />
+                                        </g>
+                                        <path d="m 46,227 h 90 V 15 H 46 Z"
+                                            style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                            id="path1526" />
+                                        <path d="m 376,227 h 90 V 15 h -90 z"
+                                            style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                            id="path1528" />
+                                        <g id="g1530" transform="translate(46,227)">
+                                            <path d="M 0,0 45,90"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1532" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="g1534" transform="translate(91,317)">
+                                    <path d="M 0,0 45,-90"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1536" />
+                                </g>
+                                <g id="g1538" transform="translate(376,227)">
+                                    <path d="M 0,0 45,90"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1540" />
+                                </g>
+                                <g id="g1542">
+                                    <g id="g1544" clip-path="url(#clipPath1548)">
+                                        <g id="g1550" transform="translate(421,317)">
+                                            <path d="M 0,0 45,-90"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1552" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="g1554" transform="translate(211,287)">
+                                    <path d="M 0,0 45,90"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1556" />
+                                </g>
+                                <g id="g1558" transform="translate(256,377)">
+                                    <path d="M 0,0 45,-90"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1560" />
+                                </g>
+                                <path d="m 211,287 h 90 v -60 h -90 z"
+                                    style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                    id="path1562" />
+                                <g id="g1564" transform="translate(136,227)">
+                                    <path d="M 0,0 H 240"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1566" />
+                                </g>
+                                <g id="g1568" transform="translate(136,167)">
+                                    <path d="M 0,0 H 240"
+                                        style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                        id="path1570" />
+                                </g>
+                                <g id="g1572">
+                                    <g id="g1574" clip-path="url(#clipPath1578)">
+                                        <g id="g1580" transform="translate(256,106)">
+                                            <path d="m 0,0 c 16.568,0 30,-13.432 30,-30 v -61 h -60 v 61 c 0,16.568 13.432,30 30,30 z"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1582" />
+                                        </g>
+                                        <g id="g1584" transform="translate(256,497)">
+                                            <path d="M 0,0 V -120"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1586" />
+                                        </g>
+                                        <g id="g1588" transform="translate(256,497)">
+                                            <path d="M 0,0 C 23.432,0 36.568,-30 60,-30 V -90 C 36.568,-90 23.432,-60 0,-60"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1590" />
+                                        </g>
+                                        <g id="g1592" transform="translate(421,437)">
+                                            <path d="M 0,0 V -120"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1594" />
+                                        </g>
+                                        <g id="g1596" transform="translate(421,437)">
+                                            <path d="M 0,0 C 23.432,0 36.568,-30 60,-30 V -90 C 36.568,-90 23.432,-60 0,-60"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1598" />
+                                        </g>
+                                        <g id="g1600" transform="translate(91,437)">
+                                            <path d="M 0,0 V -120"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1602" />
+                                        </g>
+                                        <g id="g1604" transform="translate(91,437)">
+                                            <path d="M 0,0 C 23.432,0 36.568,-30 60,-30 V -90 C 36.568,-90 23.432,-60 0,-60"
+                                                style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                id="path1606" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        Return Disney PickUp Location
+                        [select* ret_pickup_disney_location id:ret_pickup_disney_location default:0 "Disney mode select" "a" "b"]
+                    </label>
+                </div>
+            </div>
+
+            <!-- Personal info -->
+            <div id="advanced_fields_part" class="vertical_direction horizontal_align_left nowrap">
+                <h2>Informations personnelles</h2>
+                <!-- Lastname - Firstname-->
+                <div class="full_width horizontal_direction vertical_align_center horizontal_align_left nowrap">
+                    <!-- Logo -->
+                    <div class="medium_logo">
+                        <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="rgb(0,0,0)">
+                                <path
+                                    d="m12 12.75c-3.17 0-5.75-2.58-5.75-5.75s2.58-5.75 5.75-5.75 5.75 2.58 5.75 5.75-2.58 5.75-5.75 5.75zm0-10c-2.34 0-4.25 1.91-4.25 4.25s1.91 4.25 4.25 4.25 4.25-1.91 4.25-4.25-1.91-4.25-4.25-4.25z" />
+                                <path
+                                    d="m20.5901 22.75c-.41 0-.75-.34-.75-.75 0-3.45-3.5199-6.25-7.8399-6.25-4.32005 0-7.84004 2.8-7.84004 6.25 0 .41-.34.75-.75.75s-.75-.34-.75-.75c0-4.27 4.18999-7.75 9.34004-7.75 5.15 0 9.3399 3.48 9.3399 7.75 0 .41-.34.75-.75.75z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div>
+                        <!-- Names -->
+                        <label id="client_name_ctn"> Nom et Prénom
+                            [textarea client_name id:client_name placeholder "DUPONT Antoine"]
+                        </label>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="full_width horizontal_direction vertical_align_center horizontal_align_left nowrap">
+                    <label id="email_ctn"> Email
+                        [email email id:email placeholder "dupont@gmail.com"]
+                    </label>
+                </div>
+                <!-- Phone number -->
+                <div class="full_width horizontal_direction vertical_align_center horizontal_align_left nowrap">
+                    <label id="phone_number_ctn"> Numéro de téléphone
+                        [phonetext phone_number id:phone_number numberonly]
+                    </label>
+                </div>
+                <!-- Country -->
+                <div class="full_width horizontal_direction vertical_align_center horizontal_align_left nowrap">
+                    <label id="country_ctn"> Country
+                        [countrytext country id:country]
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="summury" class="border">
+            SUMMURYSGETHQEHRQRQZHRQGQREH
+        </div>
+    </div>
+</div>
+
+<style>
+
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.border{
+    border: solid red 2px;
+}
+.green_border{
+    border: solid green 2px;
+}
+html{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* NEW GENERAL*/
+.center {
+display: flex;
+justify-content: center; /* Horizontal center */
+align-items: center; /* Vertical center */
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+/* Horizontal Align */
+.horizontal_align_center {
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal_align_left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.horizontal_align_right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Vertical Align */
+.vertical_align_center {
+    display: flex;
+    align-items: center;
+}
+
+.vertical_align_left {
+    display: flex;
+    align-items: flex-start;
+}
+
+.vertical_align_right {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Direction */
+.vertical_direction {
+    flex-direction: column;
+}
+
+.horizontal_direction {
+    flex-direction: row;
+}
+
+.full_width{
+    width: 100%;
+}
+    /* General Forms */
+    select {
+        font-family: quicksand;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    input {
+        font-family: quicksand;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    .medium_logo {
+        width: 22px;
+        height: 30px;
+    }
+
+    .small_logo {
+        width: 29px;
+        height: 23px;
+    }
+
+    .very_small_logo {
+        width: 20px;
+        height: 14px;
+    }
+
+    .field_title {
+        font-family: quicksand;
+        font-weight: 300;
+        font-size: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        transform: translateY(25px);
+    }
+
+    .medium_indent {
+        padding-left: 20px;
+    }
+
+    .high_indent {
+        padding-left: 50px;
+    }
+
+    .title_logo {
+        transform: translateY(29px);
+        margin-right: 5px;
+    }
+
+    .between_col_spaces {
+        margin-left: 20px;
+    }
+
+    /* Details Part */
+
+    /* Pickup Part */
+    #dep_pickup_location {
+        width: 332px;
+        height: 51px;
+
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Drop Part */
+    #dep_drop_location {
+        width: 332px;
+        height: 51px;
+
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Date Part */
+    #dep_pickup_date {
+
+    }
+
+    /* Passengers */
+    #passengers {
+        width: 187px;
+        height: 40px;
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* Hours */
+    #dep_departure_hours {
+
+    }
+
+    /* Luggages */
+    #luggages {
+        width: 187px;
+        height: 40px;
+        background: #F3F3F3;
+        border-radius: 50px;
+    }
+
+    /* RETURN */
+    #return_part{
+        border: solid black 2px;
+        border-radius: 50px;
+    }
+
+
+</style>
